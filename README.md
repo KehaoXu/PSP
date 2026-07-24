@@ -539,7 +539,7 @@ python paper_figures/scripts/plot_denoising_trajectory_viz.py --model sd35 --bas
 @article{guimaraes2026psp,
   title={Inference-Time Scaling of Diffusion Models via Progressive Seed Pruning},
   author={Guimaraes, Rogerio and Perona, Pietro},
-  journal={arXiv preprint},
+  journal={arXiv preprint arxiv:2607.21591},
   year={2026}
 }
 ```
