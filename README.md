@@ -3,6 +3,8 @@
 [![Paper](https://img.shields.io/badge/arXiv-2607.21591-b31b1b.svg)](https://arxiv.org/abs/2607.21591)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
+Official implementation of the paper Inference-Time Scaling of Diffusion Models via Progressive Seed Pruning (ECCV 2026)
+
 **Rogério Guimarães, Pietro Perona** &middot; California Institute of Technology
 
 [Paper](https://arxiv.org/abs/2607.21591) &middot; [arXiv](https://arxiv.org/abs/2607.21591)
