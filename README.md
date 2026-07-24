@@ -7,7 +7,7 @@ Official implementation of the paper Inference-Time Scaling of Diffusion Models 
 
 **Rogério Guimarães, Pietro Perona** &middot; California Institute of Technology
 
-[Paper](https://arxiv.org/abs/2607.21591) &middot; [arXiv](https://arxiv.org/abs/2607.21591)
+[Paper](https://arxiv.org/pdf/2607.21591) &middot; [arXiv](https://arxiv.org/abs/2607.21591)
 
 ![PSP teaser: examples of image generation improvement with PSP](paper_figures/figures/teaser.jpg)
 
