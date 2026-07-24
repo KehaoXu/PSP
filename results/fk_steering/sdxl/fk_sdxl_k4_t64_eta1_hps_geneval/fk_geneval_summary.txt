@@ -1,0 +1,9 @@
+FK root: /media/rogerio-lab/rogerio_ssd1/projects/feature_fk_search/results/fk_steering/sdxl/fk_sdxl_k4_t64_eta1_hps_geneval
+Guidance metric: HPS
+
+Per-seed results:
+- seed=42: HPS_mean=0.299622, GenEval=0.580967, prompts=553
+- seed=43: HPS_mean=0.298451, GenEval=0.596060, prompts=553
+- seed=44: HPS_mean=0.298897, GenEval=0.593714, prompts=553
+
+Mean across seeds: HPS_mean=0.298990 (std=0.000483), GenEval=0.590247 (std=0.006631)

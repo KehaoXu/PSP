@@ -1,0 +1,9 @@
+DSearch root: /home/rogerio-lab/PycharmProjects/feature_fk_search/results_local/fits_rbf_v1/sd15/fitsrbf_sd15_t64_ir_geneval
+Guidance metric: IR
+
+Per-seed results:
+- seed=42: IR_mean=0.000000, GenEval=0.538624, prompts=553, shards=4
+- seed=43: IR_mean=0.000000, GenEval=0.508047, prompts=553, shards=4
+- seed=44: IR_mean=0.000000, GenEval=0.514062, prompts=553, shards=4
+
+Mean across seeds: IR_mean=0.000000 (std=0.000000), GenEval=0.520244 (std=0.013226)

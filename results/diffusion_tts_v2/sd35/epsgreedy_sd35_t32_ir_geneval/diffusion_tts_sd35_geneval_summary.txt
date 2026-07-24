@@ -1,0 +1,9 @@
+DSearch root: /media/rogerio-lab/rogerio_ssd1/projects/feature_fk_search/results/diffusion_tts_v2/sd35/epsgreedy_sd35_t32_ir_geneval
+Guidance metric: IR
+
+Per-seed results:
+- seed=42: IR_mean=1.100650, GenEval=0.705101, prompts=553, shards=8
+- seed=43: IR_mean=1.069038, GenEval=0.697543, prompts=553, shards=8
+- seed=44: IR_mean=1.088614, GenEval=0.695493, prompts=553, shards=8
+
+Mean across seeds: IR_mean=1.086101 (std=0.013027), GenEval=0.699379 (std=0.004132)

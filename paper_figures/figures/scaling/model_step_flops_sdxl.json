@@ -1,0 +1,13 @@
+{
+  "model": "sdxl",
+  "hf_id": "stabilityai/stable-diffusion-xl-base-1.0",
+  "device": "cuda",
+  "dtype": "torch.float16",
+  "denoiser_module": "unet",
+  "one_step_flops": 5978172950983,
+  "one_step_gflops": 5978.172950983,
+  "one_step_tflops": 5.978172950983,
+  "num_parameters": 2567463684,
+  "num_trainable_parameters": 2567463684,
+  "notes": "FLOPs computed via torch.profiler(with_flops=True) on one denoiser forward step."
+}

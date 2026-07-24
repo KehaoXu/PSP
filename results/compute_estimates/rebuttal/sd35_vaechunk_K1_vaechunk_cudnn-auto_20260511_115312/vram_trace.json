@@ -1,0 +1,3036 @@
+{
+  "config": {
+    "model_name": "stable-diffusion-3.5-large",
+    "device": "cuda",
+    "time_steps": 32,
+    "seed": 0,
+    "prompt_start_id": 0,
+    "num_prompts_total": 11,
+    "num_prompts_stats": 10,
+    "dropped_warmup_prompt_ids": [
+      0
+    ],
+    "stats_prompt_ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "cudnn_benchmark": "auto",
+    "cudnn_benchmark_state": "unchanged:False",
+    "selected_methods": [
+      "pps"
+    ],
+    "pps_offload_first_n_evals": 0,
+    "pps_vae_decode_batch": 1,
+    "method_configs": {
+      "bon": {
+        "init_particles": 4,
+        "eval_steps": [
+          32
+        ]
+      },
+      "pps": {
+        "init_particles": 8,
+        "eval_steps": [
+          8,
+          16,
+          32
+        ],
+        "keep_by_step": {
+          "8": 4,
+          "16": 2,
+          "32": 2
+        }
+      }
+    }
+  },
+  "averaged": {
+    "pps": [
+      {
+        "step": 1,
+        "is_eval": false,
+        "mean_t_s": 2.5402448303997516,
+        "std_t_s": 0.029225385964299654,
+        "mean_alloc_bytes": 32039575347.2,
+        "std_alloc_bytes": 31653040.999203898,
+        "mean_peak_alloc_bytes": 36244687872.0,
+        "std_peak_alloc_bytes": 31663077.721005734,
+        "n": 10
+      },
+      {
+        "step": 2,
+        "is_eval": false,
+        "mean_t_s": 4.754908479750156,
+        "std_t_s": 0.029490173240294022,
+        "mean_alloc_bytes": 32043497676.8,
+        "std_alloc_bytes": 31758888.168323096,
+        "mean_peak_alloc_bytes": 36270464000.0,
+        "std_peak_alloc_bytes": 31601584.43269347,
+        "n": 10
+      },
+      {
+        "step": 3,
+        "is_eval": false,
+        "mean_t_s": 6.971258812770247,
+        "std_t_s": 0.030461551693691004,
+        "mean_alloc_bytes": 32043851571.2,
+        "std_alloc_bytes": 31786847.348501965,
+        "mean_peak_alloc_bytes": 36274419097.6,
+        "std_peak_alloc_bytes": 31719359.551633332,
+        "n": 10
+      },
+      {
+        "step": 4,
+        "is_eval": false,
+        "mean_t_s": 9.187710606120527,
+        "std_t_s": 0.030575030001178925,
+        "mean_alloc_bytes": 32043523891.2,
+        "std_alloc_bytes": 31625892.48332877,
+        "mean_peak_alloc_bytes": 36274727936.0,
+        "std_peak_alloc_bytes": 31705730.10831959,
+        "n": 10
+      },
+      {
+        "step": 5,
+        "is_eval": false,
+        "mean_t_s": 11.403945615328848,
+        "std_t_s": 0.030003907225445412,
+        "mean_alloc_bytes": 32043756544.0,
+        "std_alloc_bytes": 31678981.890430927,
+        "mean_peak_alloc_bytes": 36274505113.6,
+        "std_peak_alloc_bytes": 31532298.511669908,
+        "n": 10
+      },
+      {
+        "step": 6,
+        "is_eval": false,
+        "mean_t_s": 13.620316472277045,
+        "std_t_s": 0.031026734971464173,
+        "mean_alloc_bytes": 32043374796.8,
+        "std_alloc_bytes": 31731326.690728933,
+        "mean_peak_alloc_bytes": 36274507571.2,
+        "std_peak_alloc_bytes": 31699392.99029912,
+        "n": 10
+      },
+      {
+        "step": 7,
+        "is_eval": false,
+        "mean_t_s": 15.83659205455333,
+        "std_t_s": 0.03199424251656701,
+        "mean_alloc_bytes": 32043659878.4,
+        "std_alloc_bytes": 31749773.197906416,
+        "mean_peak_alloc_bytes": 36274323251.2,
+        "std_peak_alloc_bytes": 31705001.090261206,
+        "n": 10
+      },
+      {
+        "step": 8,
+        "is_eval": true,
+        "mean_t_s": 19.033683349750937,
+        "std_t_s": 0.03150625461815182,
+        "mean_alloc_bytes": 32082874368.0,
+        "std_alloc_bytes": 31607800.857326146,
+        "mean_peak_alloc_bytes": 37422445363.2,
+        "std_peak_alloc_bytes": 31611393.907046042,
+        "n": 10
+      },
+      {
+        "step": 9,
+        "is_eval": false,
+        "mean_t_s": 20.138907622359692,
+        "std_t_s": 0.03138493004540274,
+        "mean_alloc_bytes": 32066009292.8,
+        "std_alloc_bytes": 31866041.848743405,
+        "mean_peak_alloc_bytes": 34194358476.8,
+        "std_peak_alloc_bytes": 31533325.732615564,
+        "n": 10
+      },
+      {
+        "step": 10,
+        "is_eval": false,
+        "mean_t_s": 21.245041351765394,
+        "std_t_s": 0.03197420971922723,
+        "mean_alloc_bytes": 31996626329.6,
+        "std_alloc_bytes": 32334304.0782309,
+        "mean_peak_alloc_bytes": 34179514777.6,
+        "std_peak_alloc_bytes": 31971278.519455798,
+        "n": 10
+      },
+      {
+        "step": 11,
+        "is_eval": false,
+        "mean_t_s": 22.351406530663372,
+        "std_t_s": 0.03174074020366818,
+        "mean_alloc_bytes": 31996698419.2,
+        "std_alloc_bytes": 32274771.65491403,
+        "mean_peak_alloc_bytes": 34112307404.8,
+        "std_peak_alloc_bytes": 32404985.97925645,
+        "n": 10
+      },
+      {
+        "step": 12,
+        "is_eval": false,
+        "mean_t_s": 23.457295288331807,
+        "std_t_s": 0.032011868672488154,
+        "mean_alloc_bytes": 31996480512.0,
+        "std_alloc_bytes": 32454224.16551504,
+        "mean_peak_alloc_bytes": 34112289996.8,
+        "std_peak_alloc_bytes": 32472720.669029027,
+        "n": 10
+      },
+      {
+        "step": 13,
+        "is_eval": false,
+        "mean_t_s": 24.563949392177165,
+        "std_t_s": 0.03169452048831189,
+        "mean_alloc_bytes": 31996595200.0,
+        "std_alloc_bytes": 32431179.24912421,
+        "mean_peak_alloc_bytes": 34112069017.6,
+        "std_peak_alloc_bytes": 32521566.181925368,
+        "n": 10
+      },
+      {
+        "step": 14,
+        "is_eval": false,
+        "mean_t_s": 25.669747202284633,
+        "std_t_s": 0.031477855823677174,
+        "mean_alloc_bytes": 31996619776.0,
+        "std_alloc_bytes": 32420846.916798156,
+        "mean_peak_alloc_bytes": 34112103219.2,
+        "std_peak_alloc_bytes": 32504071.329323478,
+        "n": 10
+      },
+      {
+        "step": 15,
+        "is_eval": false,
+        "mean_t_s": 26.775714018754663,
+        "std_t_s": 0.031253919376079825,
+        "mean_alloc_bytes": 31996623052.8,
+        "std_alloc_bytes": 32304382.92530585,
+        "mean_peak_alloc_bytes": 34112155852.8,
+        "std_peak_alloc_bytes": 32544115.210547343,
+        "n": 10
+      },
+      {
+        "step": 16,
+        "is_eval": true,
+        "mean_t_s": 28.381717206910253,
+        "std_t_s": 0.031552153312848885,
+        "mean_alloc_bytes": 32016630579.2,
+        "std_alloc_bytes": 32292144.537856128,
+        "mean_peak_alloc_bytes": 37322912563.2,
+        "std_peak_alloc_bytes": 32262756.04377656,
+        "n": 10
+      },
+      {
+        "step": 17,
+        "is_eval": false,
+        "mean_t_s": 28.940662690997122,
+        "std_t_s": 0.031687638850649416,
+        "mean_alloc_bytes": 32000449382.4,
+        "std_alloc_bytes": 29163342.245700482,
+        "mean_peak_alloc_bytes": 33064640153.6,
+        "std_peak_alloc_bytes": 29216265.71381878,
+        "n": 10
+      },
+      {
+        "step": 18,
+        "is_eval": false,
+        "mean_t_s": 29.500297486409544,
+        "std_t_s": 0.03171721054556558,
+        "mean_alloc_bytes": 31960328140.8,
+        "std_alloc_bytes": 32406945.923509166,
+        "mean_peak_alloc_bytes": 33052405708.8,
+        "std_peak_alloc_bytes": 32655473.640620355,
+        "n": 10
+      },
+      {
+        "step": 19,
+        "is_eval": false,
+        "mean_t_s": 30.05993719752878,
+        "std_t_s": 0.031849567942353205,
+        "mean_alloc_bytes": 31960396953.6,
+        "std_alloc_bytes": 32547814.55440531,
+        "mean_peak_alloc_bytes": 33018151884.8,
+        "std_peak_alloc_bytes": 32559580.506665353,
+        "n": 10
+      },
+      {
+        "step": 20,
+        "is_eval": false,
+        "mean_t_s": 30.619491716846824,
+        "std_t_s": 0.03199995879490028,
+        "mean_alloc_bytes": 31960298649.6,
+        "std_alloc_bytes": 32419290.58456615,
+        "mean_peak_alloc_bytes": 33018273126.4,
+        "std_peak_alloc_bytes": 32780897.936308384,
+        "n": 10
+      },
+      {
+        "step": 21,
+        "is_eval": false,
+        "mean_t_s": 31.17915252763778,
+        "std_t_s": 0.032365811931129425,
+        "mean_alloc_bytes": 31960396953.6,
+        "std_alloc_bytes": 32547814.55440531,
+        "mean_peak_alloc_bytes": 33018122393.6,
+        "std_peak_alloc_bytes": 32572029.055294704,
+        "n": 10
+      },
+      {
+        "step": 22,
+        "is_eval": false,
+        "mean_t_s": 31.738819026574493,
+        "std_t_s": 0.03246557537047757,
+        "mean_alloc_bytes": 31960298649.6,
+        "std_alloc_bytes": 32419290.58456615,
+        "mean_peak_alloc_bytes": 33018273126.4,
+        "std_peak_alloc_bytes": 32780897.936308384,
+        "n": 10
+      },
+      {
+        "step": 23,
+        "is_eval": false,
+        "mean_t_s": 32.29842518717051,
+        "std_t_s": 0.03247045002652076,
+        "mean_alloc_bytes": 31960396953.6,
+        "std_alloc_bytes": 32547814.55440531,
+        "mean_peak_alloc_bytes": 33018122393.6,
+        "std_peak_alloc_bytes": 32572029.055294704,
+        "n": 10
+      },
+      {
+        "step": 24,
+        "is_eval": false,
+        "mean_t_s": 32.85801980551332,
+        "std_t_s": 0.03235244687347848,
+        "mean_alloc_bytes": 31960298649.6,
+        "std_alloc_bytes": 32419290.58456615,
+        "mean_peak_alloc_bytes": 33018273126.4,
+        "std_peak_alloc_bytes": 32780897.936308384,
+        "n": 10
+      },
+      {
+        "step": 25,
+        "is_eval": false,
+        "mean_t_s": 33.417416979931296,
+        "std_t_s": 0.03242901359483594,
+        "mean_alloc_bytes": 31960396953.6,
+        "std_alloc_bytes": 32547814.55440531,
+        "mean_peak_alloc_bytes": 33018122393.6,
+        "std_peak_alloc_bytes": 32572029.055294704,
+        "n": 10
+      },
+      {
+        "step": 26,
+        "is_eval": false,
+        "mean_t_s": 33.97700981106609,
+        "std_t_s": 0.03239484510364956,
+        "mean_alloc_bytes": 31960298649.6,
+        "std_alloc_bytes": 32419290.58456615,
+        "mean_peak_alloc_bytes": 33018273126.4,
+        "std_peak_alloc_bytes": 32780897.936308384,
+        "n": 10
+      },
+      {
+        "step": 27,
+        "is_eval": false,
+        "mean_t_s": 34.5366081211716,
+        "std_t_s": 0.0325667385432503,
+        "mean_alloc_bytes": 31960396953.6,
+        "std_alloc_bytes": 32547814.55440531,
+        "mean_peak_alloc_bytes": 33018122393.6,
+        "std_peak_alloc_bytes": 32572029.055294704,
+        "n": 10
+      },
+      {
+        "step": 28,
+        "is_eval": false,
+        "mean_t_s": 35.096271011419596,
+        "std_t_s": 0.03256209922425233,
+        "mean_alloc_bytes": 31960298649.6,
+        "std_alloc_bytes": 32419290.58456615,
+        "mean_peak_alloc_bytes": 33018273126.4,
+        "std_peak_alloc_bytes": 32780897.936308384,
+        "n": 10
+      },
+      {
+        "step": 29,
+        "is_eval": false,
+        "mean_t_s": 35.656057227775456,
+        "std_t_s": 0.03261622901732203,
+        "mean_alloc_bytes": 31960396953.6,
+        "std_alloc_bytes": 32547814.55440531,
+        "mean_peak_alloc_bytes": 33018122393.6,
+        "std_peak_alloc_bytes": 32572029.055294704,
+        "n": 10
+      },
+      {
+        "step": 30,
+        "is_eval": false,
+        "mean_t_s": 36.21578444298357,
+        "std_t_s": 0.03264862072749961,
+        "mean_alloc_bytes": 31960298649.6,
+        "std_alloc_bytes": 32419290.58456615,
+        "mean_peak_alloc_bytes": 33018273126.4,
+        "std_peak_alloc_bytes": 32780897.936308384,
+        "n": 10
+      },
+      {
+        "step": 31,
+        "is_eval": false,
+        "mean_t_s": 36.77539740987122,
+        "std_t_s": 0.03254768089528732,
+        "mean_alloc_bytes": 31960396953.6,
+        "std_alloc_bytes": 32547814.55440531,
+        "mean_peak_alloc_bytes": 33018122393.6,
+        "std_peak_alloc_bytes": 32572029.055294704,
+        "n": 10
+      },
+      {
+        "step": 32,
+        "is_eval": true,
+        "mean_t_s": 37.59386433530599,
+        "std_t_s": 0.03221703290815239,
+        "mean_alloc_bytes": 31961205196.8,
+        "std_alloc_bytes": 32298679.93082317,
+        "mean_peak_alloc_bytes": 37259947776.0,
+        "std_peak_alloc_bytes": 32134942.70170776,
+        "n": 10
+      }
+    ]
+  },
+  "peak_summary": {
+    "pps": {
+      "mean_peak_alloc_bytes": 37422445363.2,
+      "std_peak_alloc_bytes": 31611393.907046042,
+      "mean_peak_step": 8.0,
+      "std_peak_step": 0.0,
+      "mean_peak_t_s": 19.033683349750937,
+      "std_peak_t_s": 0.03150625461815182,
+      "mean_offload_count": 0.0,
+      "std_offload_count": 0.0,
+      "mean_offload_wall_s": 0.0,
+      "std_offload_wall_s": 0.0,
+      "n": 10
+    }
+  },
+  "per_prompt": {
+    "pps": [
+      {
+        "prompt_id": 0,
+        "method": "pps",
+        "init_particles": 8,
+        "total_wall_s": 46.12664537318051,
+        "run_peak_alloc_bytes": 37245214720,
+        "run_peak_step": 16,
+        "run_peak_t_s": 36.91623755544424,
+        "offload_count": 0,
+        "offload_wall_s": 0.0,
+        "trace": [
+          {
+            "step": 1,
+            "t_s": 3.0615442860871553,
+            "alloc_bytes": 30172700160,
+            "peak_alloc_bytes": 34378186240,
+            "is_eval": false
+          },
+          {
+            "step": 2,
+            "t_s": 5.266516936942935,
+            "alloc_bytes": 30176894464,
+            "peak_alloc_bytes": 34403352064,
+            "is_eval": false
+          },
+          {
+            "step": 3,
+            "t_s": 7.472008077427745,
+            "alloc_bytes": 30176894464,
+            "peak_alloc_bytes": 34407546368,
+            "is_eval": false
+          },
+          {
+            "step": 4,
+            "t_s": 9.67788784392178,
+            "alloc_bytes": 30176894464,
+            "peak_alloc_bytes": 34407546368,
+            "is_eval": false
+          },
+          {
+            "step": 5,
+            "t_s": 11.892574748024344,
+            "alloc_bytes": 30176894464,
+            "peak_alloc_bytes": 34407546368,
+            "is_eval": false
+          },
+          {
+            "step": 6,
+            "t_s": 14.102831421419978,
+            "alloc_bytes": 30176894464,
+            "peak_alloc_bytes": 34407546368,
+            "is_eval": false
+          },
+          {
+            "step": 7,
+            "t_s": 16.312584845349193,
+            "alloc_bytes": 30176894464,
+            "peak_alloc_bytes": 34407546368,
+            "is_eval": false
+          },
+          {
+            "step": 8,
+            "t_s": 27.5788447316736,
+            "alloc_bytes": 32005853184,
+            "peak_alloc_bytes": 35554636288,
+            "is_eval": true
+          },
+          {
+            "step": 9,
+            "t_s": 28.68273078650236,
+            "alloc_bytes": 31989074944,
+            "peak_alloc_bytes": 34116983808,
+            "is_eval": false
+          },
+          {
+            "step": 10,
+            "t_s": 29.7862169444561,
+            "alloc_bytes": 31919311872,
+            "peak_alloc_bytes": 34102303744,
+            "is_eval": false
+          },
+          {
+            "step": 11,
+            "t_s": 30.88922263495624,
+            "alloc_bytes": 31919311872,
+            "peak_alloc_bytes": 34034637824,
+            "is_eval": false
+          },
+          {
+            "step": 12,
+            "t_s": 31.993028718978167,
+            "alloc_bytes": 31919311872,
+            "peak_alloc_bytes": 34034637824,
+            "is_eval": false
+          },
+          {
+            "step": 13,
+            "t_s": 33.09620725363493,
+            "alloc_bytes": 31919311872,
+            "peak_alloc_bytes": 34034637824,
+            "is_eval": false
+          },
+          {
+            "step": 14,
+            "t_s": 34.20000220835209,
+            "alloc_bytes": 31919311872,
+            "peak_alloc_bytes": 34034637824,
+            "is_eval": false
+          },
+          {
+            "step": 15,
+            "t_s": 35.30618278309703,
+            "alloc_bytes": 31919311872,
+            "peak_alloc_bytes": 34034637824,
+            "is_eval": false
+          },
+          {
+            "step": 16,
+            "t_s": 36.91623755544424,
+            "alloc_bytes": 31938719744,
+            "peak_alloc_bytes": 37245214720,
+            "is_eval": true
+          },
+          {
+            "step": 17,
+            "t_s": 37.47853231430054,
+            "alloc_bytes": 31930330112,
+            "peak_alloc_bytes": 32994284544,
+            "is_eval": false
+          },
+          {
+            "step": 18,
+            "t_s": 38.03770781122148,
+            "alloc_bytes": 31895448576,
+            "peak_alloc_bytes": 32986944512,
+            "is_eval": false
+          },
+          {
+            "step": 19,
+            "t_s": 38.596904380247,
+            "alloc_bytes": 31895448576,
+            "peak_alloc_bytes": 32953111552,
+            "is_eval": false
+          },
+          {
+            "step": 20,
+            "t_s": 39.15559232980013,
+            "alloc_bytes": 31895448576,
+            "peak_alloc_bytes": 32953111552,
+            "is_eval": false
+          },
+          {
+            "step": 21,
+            "t_s": 39.7147769164294,
+            "alloc_bytes": 31895448576,
+            "peak_alloc_bytes": 32953111552,
+            "is_eval": false
+          },
+          {
+            "step": 22,
+            "t_s": 40.27302012965083,
+            "alloc_bytes": 31895448576,
+            "peak_alloc_bytes": 32953111552,
+            "is_eval": false
+          },
+          {
+            "step": 23,
+            "t_s": 40.83103664778173,
+            "alloc_bytes": 31895448576,
+            "peak_alloc_bytes": 32953111552,
+            "is_eval": false
+          },
+          {
+            "step": 24,
+            "t_s": 41.389346431940794,
+            "alloc_bytes": 31895448576,
+            "peak_alloc_bytes": 32953111552,
+            "is_eval": false
+          },
+          {
+            "step": 25,
+            "t_s": 41.94813022390008,
+            "alloc_bytes": 31895448576,
+            "peak_alloc_bytes": 32953111552,
+            "is_eval": false
+          },
+          {
+            "step": 26,
+            "t_s": 42.50772424787283,
+            "alloc_bytes": 31895448576,
+            "peak_alloc_bytes": 32953111552,
+            "is_eval": false
+          },
+          {
+            "step": 27,
+            "t_s": 43.06707840040326,
+            "alloc_bytes": 31895448576,
+            "peak_alloc_bytes": 32953111552,
+            "is_eval": false
+          },
+          {
+            "step": 28,
+            "t_s": 43.626479191705585,
+            "alloc_bytes": 31895448576,
+            "peak_alloc_bytes": 32953111552,
+            "is_eval": false
+          },
+          {
+            "step": 29,
+            "t_s": 44.18593381345272,
+            "alloc_bytes": 31895448576,
+            "peak_alloc_bytes": 32953111552,
+            "is_eval": false
+          },
+          {
+            "step": 30,
+            "t_s": 44.74541142769158,
+            "alloc_bytes": 31895448576,
+            "peak_alloc_bytes": 32953111552,
+            "is_eval": false
+          },
+          {
+            "step": 31,
+            "t_s": 45.30421743914485,
+            "alloc_bytes": 31895448576,
+            "peak_alloc_bytes": 32953111552,
+            "is_eval": false
+          },
+          {
+            "step": 32,
+            "t_s": 46.12624347768724,
+            "alloc_bytes": 31895760384,
+            "peak_alloc_bytes": 37195268096,
+            "is_eval": true
+          }
+        ]
+      },
+      {
+        "prompt_id": 1,
+        "method": "pps",
+        "init_particles": 8,
+        "total_wall_s": 37.55020993389189,
+        "run_peak_alloc_bytes": 37369627136,
+        "run_peak_step": 8,
+        "run_peak_t_s": 18.991878351196647,
+        "offload_count": 0,
+        "offload_wall_s": 0.0,
+        "trace": [
+          {
+            "step": 1,
+            "t_s": 2.521605337038636,
+            "alloc_bytes": 31985708544,
+            "peak_alloc_bytes": 36190932480,
+            "is_eval": false
+          },
+          {
+            "step": 2,
+            "t_s": 4.73449888266623,
+            "alloc_bytes": 31989968384,
+            "peak_alloc_bytes": 36216688128,
+            "is_eval": false
+          },
+          {
+            "step": 3,
+            "t_s": 6.943572925403714,
+            "alloc_bytes": 31989902848,
+            "peak_alloc_bytes": 36220620288,
+            "is_eval": false
+          },
+          {
+            "step": 4,
+            "t_s": 9.15776401385665,
+            "alloc_bytes": 31989968384,
+            "peak_alloc_bytes": 36220554752,
+            "is_eval": false
+          },
+          {
+            "step": 5,
+            "t_s": 11.37225242704153,
+            "alloc_bytes": 31990230528,
+            "peak_alloc_bytes": 36220620288,
+            "is_eval": false
+          },
+          {
+            "step": 6,
+            "t_s": 13.58269558660686,
+            "alloc_bytes": 31989640704,
+            "peak_alloc_bytes": 36220882432,
+            "is_eval": false
+          },
+          {
+            "step": 7,
+            "t_s": 15.796098615974188,
+            "alloc_bytes": 31990230528,
+            "peak_alloc_bytes": 36220292608,
+            "is_eval": false
+          },
+          {
+            "step": 8,
+            "t_s": 18.991878351196647,
+            "alloc_bytes": 32029307392,
+            "peak_alloc_bytes": 37369627136,
+            "is_eval": true
+          },
+          {
+            "step": 9,
+            "t_s": 20.096556589007378,
+            "alloc_bytes": 32012561920,
+            "peak_alloc_bytes": 34140798464,
+            "is_eval": false
+          },
+          {
+            "step": 10,
+            "t_s": 21.202231463044882,
+            "alloc_bytes": 31942176256,
+            "peak_alloc_bytes": 34125790720,
+            "is_eval": false
+          },
+          {
+            "step": 11,
+            "t_s": 22.308050168678164,
+            "alloc_bytes": 31942176256,
+            "peak_alloc_bytes": 34057502208,
+            "is_eval": false
+          },
+          {
+            "step": 12,
+            "t_s": 23.41317229345441,
+            "alloc_bytes": 31942176256,
+            "peak_alloc_bytes": 34057502208,
+            "is_eval": false
+          },
+          {
+            "step": 13,
+            "t_s": 24.5198357347399,
+            "alloc_bytes": 31942176256,
+            "peak_alloc_bytes": 34057502208,
+            "is_eval": false
+          },
+          {
+            "step": 14,
+            "t_s": 25.626035088673234,
+            "alloc_bytes": 31942176256,
+            "peak_alloc_bytes": 34057502208,
+            "is_eval": false
+          },
+          {
+            "step": 15,
+            "t_s": 26.732527496293187,
+            "alloc_bytes": 31942176256,
+            "peak_alloc_bytes": 34057502208,
+            "is_eval": false
+          },
+          {
+            "step": 16,
+            "t_s": 28.33861085958779,
+            "alloc_bytes": 31963386368,
+            "peak_alloc_bytes": 37269996032,
+            "is_eval": true
+          },
+          {
+            "step": 17,
+            "t_s": 28.897532047703862,
+            "alloc_bytes": 31955258880,
+            "peak_alloc_bytes": 33018951168,
+            "is_eval": false
+          },
+          {
+            "step": 18,
+            "t_s": 29.456890482455492,
+            "alloc_bytes": 31920115200,
+            "peak_alloc_bytes": 33011873280,
+            "is_eval": false
+          },
+          {
+            "step": 19,
+            "t_s": 30.016677394509315,
+            "alloc_bytes": 31920115200,
+            "peak_alloc_bytes": 32977778176,
+            "is_eval": false
+          },
+          {
+            "step": 20,
+            "t_s": 30.575687624514103,
+            "alloc_bytes": 31920115200,
+            "peak_alloc_bytes": 32977778176,
+            "is_eval": false
+          },
+          {
+            "step": 21,
+            "t_s": 31.135220982134342,
+            "alloc_bytes": 31920115200,
+            "peak_alloc_bytes": 32977778176,
+            "is_eval": false
+          },
+          {
+            "step": 22,
+            "t_s": 31.694796081632376,
+            "alloc_bytes": 31920115200,
+            "peak_alloc_bytes": 32977778176,
+            "is_eval": false
+          },
+          {
+            "step": 23,
+            "t_s": 32.25439221970737,
+            "alloc_bytes": 31920115200,
+            "peak_alloc_bytes": 32977778176,
+            "is_eval": false
+          },
+          {
+            "step": 24,
+            "t_s": 32.813689935952425,
+            "alloc_bytes": 31920115200,
+            "peak_alloc_bytes": 32977778176,
+            "is_eval": false
+          },
+          {
+            "step": 25,
+            "t_s": 33.37329603545368,
+            "alloc_bytes": 31920115200,
+            "peak_alloc_bytes": 32977778176,
+            "is_eval": false
+          },
+          {
+            "step": 26,
+            "t_s": 33.932956954464316,
+            "alloc_bytes": 31920115200,
+            "peak_alloc_bytes": 32977778176,
+            "is_eval": false
+          },
+          {
+            "step": 27,
+            "t_s": 34.49232184141874,
+            "alloc_bytes": 31920115200,
+            "peak_alloc_bytes": 32977778176,
+            "is_eval": false
+          },
+          {
+            "step": 28,
+            "t_s": 35.05166740715504,
+            "alloc_bytes": 31920115200,
+            "peak_alloc_bytes": 32977778176,
+            "is_eval": false
+          },
+          {
+            "step": 29,
+            "t_s": 35.611089864745736,
+            "alloc_bytes": 31920115200,
+            "peak_alloc_bytes": 32977778176,
+            "is_eval": false
+          },
+          {
+            "step": 30,
+            "t_s": 36.17068111337721,
+            "alloc_bytes": 31920115200,
+            "peak_alloc_bytes": 32977778176,
+            "is_eval": false
+          },
+          {
+            "step": 31,
+            "t_s": 36.73008494079113,
+            "alloc_bytes": 31920115200,
+            "peak_alloc_bytes": 32977778176,
+            "is_eval": false
+          },
+          {
+            "step": 32,
+            "t_s": 37.54988676868379,
+            "alloc_bytes": 31919542272,
+            "peak_alloc_bytes": 37219000832,
+            "is_eval": true
+          }
+        ]
+      },
+      {
+        "prompt_id": 2,
+        "method": "pps",
+        "init_particles": 8,
+        "total_wall_s": 37.58853078447282,
+        "run_peak_alloc_bytes": 37394310144,
+        "run_peak_step": 8,
+        "run_peak_t_s": 19.028749292716384,
+        "offload_count": 0,
+        "offload_wall_s": 0.0,
+        "trace": [
+          {
+            "step": 1,
+            "t_s": 2.5297451112419367,
+            "alloc_bytes": 32010080256,
+            "peak_alloc_bytes": 36214714368,
+            "is_eval": false
+          },
+          {
+            "step": 2,
+            "t_s": 4.7432907950133085,
+            "alloc_bytes": 32013422592,
+            "peak_alloc_bytes": 36240732160,
+            "is_eval": false
+          },
+          {
+            "step": 3,
+            "t_s": 6.963387247174978,
+            "alloc_bytes": 32015126528,
+            "peak_alloc_bytes": 36244074496,
+            "is_eval": false
+          },
+          {
+            "step": 4,
+            "t_s": 9.181376736611128,
+            "alloc_bytes": 32014274560,
+            "peak_alloc_bytes": 36245778432,
+            "is_eval": false
+          },
+          {
+            "step": 5,
+            "t_s": 11.396386437118053,
+            "alloc_bytes": 32014274560,
+            "peak_alloc_bytes": 36244926464,
+            "is_eval": false
+          },
+          {
+            "step": 6,
+            "t_s": 13.614161405712366,
+            "alloc_bytes": 32014274560,
+            "peak_alloc_bytes": 36244926464,
+            "is_eval": false
+          },
+          {
+            "step": 7,
+            "t_s": 15.830353127792478,
+            "alloc_bytes": 32014274560,
+            "peak_alloc_bytes": 36244926464,
+            "is_eval": false
+          },
+          {
+            "step": 8,
+            "t_s": 19.028749292716384,
+            "alloc_bytes": 32054760448,
+            "peak_alloc_bytes": 37394310144,
+            "is_eval": true
+          },
+          {
+            "step": 9,
+            "t_s": 20.13416888192296,
+            "alloc_bytes": 32036802560,
+            "peak_alloc_bytes": 34166415360,
+            "is_eval": false
+          },
+          {
+            "step": 10,
+            "t_s": 21.239240303635597,
+            "alloc_bytes": 31966515200,
+            "peak_alloc_bytes": 34150031360,
+            "is_eval": false
+          },
+          {
+            "step": 11,
+            "t_s": 22.34656712412834,
+            "alloc_bytes": 31967301632,
+            "peak_alloc_bytes": 34082365440,
+            "is_eval": false
+          },
+          {
+            "step": 12,
+            "t_s": 23.452819496393204,
+            "alloc_bytes": 31966777344,
+            "peak_alloc_bytes": 34082627584,
+            "is_eval": false
+          },
+          {
+            "step": 13,
+            "t_s": 24.559815641492605,
+            "alloc_bytes": 31967039488,
+            "peak_alloc_bytes": 34082627584,
+            "is_eval": false
+          },
+          {
+            "step": 14,
+            "t_s": 25.664079312235117,
+            "alloc_bytes": 31966777344,
+            "peak_alloc_bytes": 34082365440,
+            "is_eval": false
+          },
+          {
+            "step": 15,
+            "t_s": 26.770238103345037,
+            "alloc_bytes": 31967301632,
+            "peak_alloc_bytes": 34082103296,
+            "is_eval": false
+          },
+          {
+            "step": 16,
+            "t_s": 28.377483626827598,
+            "alloc_bytes": 31985710080,
+            "peak_alloc_bytes": 37293515776,
+            "is_eval": true
+          },
+          {
+            "step": 17,
+            "t_s": 28.936223527416587,
+            "alloc_bytes": 31977320448,
+            "peak_alloc_bytes": 33041012736,
+            "is_eval": false
+          },
+          {
+            "step": 18,
+            "t_s": 29.49565688893199,
+            "alloc_bytes": 31942701056,
+            "peak_alloc_bytes": 33033934848,
+            "is_eval": false
+          },
+          {
+            "step": 19,
+            "t_s": 30.055318601429462,
+            "alloc_bytes": 31942438912,
+            "peak_alloc_bytes": 33000364032,
+            "is_eval": false
+          },
+          {
+            "step": 20,
+            "t_s": 30.614794734865427,
+            "alloc_bytes": 31942438912,
+            "peak_alloc_bytes": 33000101888,
+            "is_eval": false
+          },
+          {
+            "step": 21,
+            "t_s": 31.17409122362733,
+            "alloc_bytes": 31942438912,
+            "peak_alloc_bytes": 33000101888,
+            "is_eval": false
+          },
+          {
+            "step": 22,
+            "t_s": 31.73382834903896,
+            "alloc_bytes": 31942438912,
+            "peak_alloc_bytes": 33000101888,
+            "is_eval": false
+          },
+          {
+            "step": 23,
+            "t_s": 32.29331007041037,
+            "alloc_bytes": 31942438912,
+            "peak_alloc_bytes": 33000101888,
+            "is_eval": false
+          },
+          {
+            "step": 24,
+            "t_s": 32.852738332003355,
+            "alloc_bytes": 31942438912,
+            "peak_alloc_bytes": 33000101888,
+            "is_eval": false
+          },
+          {
+            "step": 25,
+            "t_s": 33.41124046780169,
+            "alloc_bytes": 31942438912,
+            "peak_alloc_bytes": 33000101888,
+            "is_eval": false
+          },
+          {
+            "step": 26,
+            "t_s": 33.97077273204923,
+            "alloc_bytes": 31942438912,
+            "peak_alloc_bytes": 33000101888,
+            "is_eval": false
+          },
+          {
+            "step": 27,
+            "t_s": 34.53012052178383,
+            "alloc_bytes": 31942438912,
+            "peak_alloc_bytes": 33000101888,
+            "is_eval": false
+          },
+          {
+            "step": 28,
+            "t_s": 35.08973294496536,
+            "alloc_bytes": 31942438912,
+            "peak_alloc_bytes": 33000101888,
+            "is_eval": false
+          },
+          {
+            "step": 29,
+            "t_s": 35.64962882362306,
+            "alloc_bytes": 31942438912,
+            "peak_alloc_bytes": 33000101888,
+            "is_eval": false
+          },
+          {
+            "step": 30,
+            "t_s": 36.209606474265456,
+            "alloc_bytes": 31942438912,
+            "peak_alloc_bytes": 33000101888,
+            "is_eval": false
+          },
+          {
+            "step": 31,
+            "t_s": 36.76912818849087,
+            "alloc_bytes": 31942438912,
+            "peak_alloc_bytes": 33000101888,
+            "is_eval": false
+          },
+          {
+            "step": 32,
+            "t_s": 37.58818512968719,
+            "alloc_bytes": 31943799296,
+            "peak_alloc_bytes": 37243552768,
+            "is_eval": true
+          }
+        ]
+      },
+      {
+        "prompt_id": 3,
+        "method": "pps",
+        "init_particles": 8,
+        "total_wall_s": 37.59265202656388,
+        "run_peak_alloc_bytes": 37417223680,
+        "run_peak_step": 8,
+        "run_peak_t_s": 19.0328318644315,
+        "offload_count": 0,
+        "offload_wall_s": 0.0,
+        "trace": [
+          {
+            "step": 1,
+            "t_s": 2.533018846064806,
+            "alloc_bytes": 32034533888,
+            "peak_alloc_bytes": 36240019968,
+            "is_eval": false
+          },
+          {
+            "step": 2,
+            "t_s": 4.750030742958188,
+            "alloc_bytes": 32037679616,
+            "peak_alloc_bytes": 36265185792,
+            "is_eval": false
+          },
+          {
+            "step": 3,
+            "t_s": 6.967946765944362,
+            "alloc_bytes": 32038728192,
+            "peak_alloc_bytes": 36269380096,
+            "is_eval": false
+          },
+          {
+            "step": 4,
+            "t_s": 9.184116572141647,
+            "alloc_bytes": 32037679616,
+            "peak_alloc_bytes": 36269380096,
+            "is_eval": false
+          },
+          {
+            "step": 5,
+            "t_s": 11.402293292805552,
+            "alloc_bytes": 32038728192,
+            "peak_alloc_bytes": 36269380096,
+            "is_eval": false
+          },
+          {
+            "step": 6,
+            "t_s": 13.618283467367291,
+            "alloc_bytes": 32037679616,
+            "peak_alloc_bytes": 36269380096,
+            "is_eval": false
+          },
+          {
+            "step": 7,
+            "t_s": 15.833669994026423,
+            "alloc_bytes": 32037679616,
+            "peak_alloc_bytes": 36268331520,
+            "is_eval": false
+          },
+          {
+            "step": 8,
+            "t_s": 19.0328318644315,
+            "alloc_bytes": 32076740096,
+            "peak_alloc_bytes": 37417223680,
+            "is_eval": true
+          },
+          {
+            "step": 9,
+            "t_s": 20.137531589716673,
+            "alloc_bytes": 32060371456,
+            "peak_alloc_bytes": 34188280320,
+            "is_eval": false
+          },
+          {
+            "step": 10,
+            "t_s": 21.24375250004232,
+            "alloc_bytes": 31990460928,
+            "peak_alloc_bytes": 34173600256,
+            "is_eval": false
+          },
+          {
+            "step": 11,
+            "t_s": 22.34979599714279,
+            "alloc_bytes": 31991132672,
+            "peak_alloc_bytes": 34106196480,
+            "is_eval": false
+          },
+          {
+            "step": 12,
+            "t_s": 23.456037497147918,
+            "alloc_bytes": 31990460928,
+            "peak_alloc_bytes": 34106458624,
+            "is_eval": false
+          },
+          {
+            "step": 13,
+            "t_s": 24.56102273799479,
+            "alloc_bytes": 31990460928,
+            "peak_alloc_bytes": 34105786880,
+            "is_eval": false
+          },
+          {
+            "step": 14,
+            "t_s": 25.666020078584552,
+            "alloc_bytes": 31990723072,
+            "peak_alloc_bytes": 34105786880,
+            "is_eval": false
+          },
+          {
+            "step": 15,
+            "t_s": 26.77211375720799,
+            "alloc_bytes": 31990460928,
+            "peak_alloc_bytes": 34106049024,
+            "is_eval": false
+          },
+          {
+            "step": 16,
+            "t_s": 28.37892114557326,
+            "alloc_bytes": 32010491392,
+            "peak_alloc_bytes": 37318477312,
+            "is_eval": true
+          },
+          {
+            "step": 17,
+            "t_s": 28.937491266056895,
+            "alloc_bytes": 32001839616,
+            "peak_alloc_bytes": 33065531904,
+            "is_eval": false
+          },
+          {
+            "step": 18,
+            "t_s": 29.4980647303164,
+            "alloc_bytes": 31918706176,
+            "peak_alloc_bytes": 33010726400,
+            "is_eval": false
+          },
+          {
+            "step": 19,
+            "t_s": 30.057924872264266,
+            "alloc_bytes": 31918706176,
+            "peak_alloc_bytes": 32976369152,
+            "is_eval": false
+          },
+          {
+            "step": 20,
+            "t_s": 30.61749067902565,
+            "alloc_bytes": 31918706176,
+            "peak_alloc_bytes": 32976369152,
+            "is_eval": false
+          },
+          {
+            "step": 21,
+            "t_s": 31.177065717056394,
+            "alloc_bytes": 31918706176,
+            "peak_alloc_bytes": 32976369152,
+            "is_eval": false
+          },
+          {
+            "step": 22,
+            "t_s": 31.736611794680357,
+            "alloc_bytes": 31918706176,
+            "peak_alloc_bytes": 32976369152,
+            "is_eval": false
+          },
+          {
+            "step": 23,
+            "t_s": 32.2963448241353,
+            "alloc_bytes": 31918706176,
+            "peak_alloc_bytes": 32976369152,
+            "is_eval": false
+          },
+          {
+            "step": 24,
+            "t_s": 32.85642557032406,
+            "alloc_bytes": 31918706176,
+            "peak_alloc_bytes": 32976369152,
+            "is_eval": false
+          },
+          {
+            "step": 25,
+            "t_s": 33.416113359853625,
+            "alloc_bytes": 31918706176,
+            "peak_alloc_bytes": 32976369152,
+            "is_eval": false
+          },
+          {
+            "step": 26,
+            "t_s": 33.97550119459629,
+            "alloc_bytes": 31918706176,
+            "peak_alloc_bytes": 32976369152,
+            "is_eval": false
+          },
+          {
+            "step": 27,
+            "t_s": 34.535134982317686,
+            "alloc_bytes": 31918706176,
+            "peak_alloc_bytes": 32976369152,
+            "is_eval": false
+          },
+          {
+            "step": 28,
+            "t_s": 35.09472998045385,
+            "alloc_bytes": 31918706176,
+            "peak_alloc_bytes": 32976369152,
+            "is_eval": false
+          },
+          {
+            "step": 29,
+            "t_s": 35.65499651059508,
+            "alloc_bytes": 31918706176,
+            "peak_alloc_bytes": 32976369152,
+            "is_eval": false
+          },
+          {
+            "step": 30,
+            "t_s": 36.21472232043743,
+            "alloc_bytes": 31918706176,
+            "peak_alloc_bytes": 32976369152,
+            "is_eval": false
+          },
+          {
+            "step": 31,
+            "t_s": 36.774272879585624,
+            "alloc_bytes": 31918706176,
+            "peak_alloc_bytes": 32976369152,
+            "is_eval": false
+          },
+          {
+            "step": 32,
+            "t_s": 37.59232407994568,
+            "alloc_bytes": 31920476160,
+            "peak_alloc_bytes": 37219066368,
+            "is_eval": true
+          }
+        ]
+      },
+      {
+        "prompt_id": 4,
+        "method": "pps",
+        "init_particles": 8,
+        "total_wall_s": 37.595379170030355,
+        "run_peak_alloc_bytes": 37394392064,
+        "run_peak_step": 8,
+        "run_peak_t_s": 19.03151162713766,
+        "offload_count": 0,
+        "offload_wall_s": 0.0,
+        "trace": [
+          {
+            "step": 1,
+            "t_s": 2.5313033163547516,
+            "alloc_bytes": 32011210752,
+            "peak_alloc_bytes": 36216696832,
+            "is_eval": false
+          },
+          {
+            "step": 2,
+            "t_s": 4.747441925108433,
+            "alloc_bytes": 32015208448,
+            "peak_alloc_bytes": 36241862656,
+            "is_eval": false
+          },
+          {
+            "step": 3,
+            "t_s": 6.966892899945378,
+            "alloc_bytes": 32015208448,
+            "peak_alloc_bytes": 36245860352,
+            "is_eval": false
+          },
+          {
+            "step": 4,
+            "t_s": 9.183894963935018,
+            "alloc_bytes": 32015405056,
+            "peak_alloc_bytes": 36246458368,
+            "is_eval": false
+          },
+          {
+            "step": 5,
+            "t_s": 11.400457924231887,
+            "alloc_bytes": 32015208448,
+            "peak_alloc_bytes": 36246654976,
+            "is_eval": false
+          },
+          {
+            "step": 6,
+            "t_s": 13.619134798645973,
+            "alloc_bytes": 32015208448,
+            "peak_alloc_bytes": 36245860352,
+            "is_eval": false
+          },
+          {
+            "step": 7,
+            "t_s": 15.835316753014922,
+            "alloc_bytes": 32014356480,
+            "peak_alloc_bytes": 36246458368,
+            "is_eval": false
+          },
+          {
+            "step": 8,
+            "t_s": 19.03151162713766,
+            "alloc_bytes": 32055432192,
+            "peak_alloc_bytes": 37394392064,
+            "is_eval": true
+          },
+          {
+            "step": 9,
+            "t_s": 20.136488243937492,
+            "alloc_bytes": 32037916672,
+            "peak_alloc_bytes": 34167023616,
+            "is_eval": false
+          },
+          {
+            "step": 10,
+            "t_s": 21.242646232247353,
+            "alloc_bytes": 31968301056,
+            "peak_alloc_bytes": 34151294976,
+            "is_eval": false
+          },
+          {
+            "step": 11,
+            "t_s": 22.348641285672784,
+            "alloc_bytes": 31967825920,
+            "peak_alloc_bytes": 34083776512,
+            "is_eval": false
+          },
+          {
+            "step": 12,
+            "t_s": 23.455125138163567,
+            "alloc_bytes": 31967252480,
+            "peak_alloc_bytes": 34083301376,
+            "is_eval": false
+          },
+          {
+            "step": 13,
+            "t_s": 24.56158703006804,
+            "alloc_bytes": 31968301056,
+            "peak_alloc_bytes": 34082727936,
+            "is_eval": false
+          },
+          {
+            "step": 14,
+            "t_s": 25.66647240705788,
+            "alloc_bytes": 31967825920,
+            "peak_alloc_bytes": 34083776512,
+            "is_eval": false
+          },
+          {
+            "step": 15,
+            "t_s": 26.772604163736105,
+            "alloc_bytes": 31968301056,
+            "peak_alloc_bytes": 34083301376,
+            "is_eval": false
+          },
+          {
+            "step": 16,
+            "t_s": 28.379885360598564,
+            "alloc_bytes": 31987332096,
+            "peak_alloc_bytes": 37293024256,
+            "is_eval": true
+          },
+          {
+            "step": 17,
+            "t_s": 28.938790511339903,
+            "alloc_bytes": 31978369024,
+            "peak_alloc_bytes": 33042372608,
+            "is_eval": false
+          },
+          {
+            "step": 18,
+            "t_s": 29.49924156628549,
+            "alloc_bytes": 31943225344,
+            "peak_alloc_bytes": 33034983424,
+            "is_eval": false
+          },
+          {
+            "step": 19,
+            "t_s": 30.058668633922935,
+            "alloc_bytes": 31943225344,
+            "peak_alloc_bytes": 33000888320,
+            "is_eval": false
+          },
+          {
+            "step": 20,
+            "t_s": 30.618235325440764,
+            "alloc_bytes": 31943225344,
+            "peak_alloc_bytes": 33000888320,
+            "is_eval": false
+          },
+          {
+            "step": 21,
+            "t_s": 31.177874017506838,
+            "alloc_bytes": 31943225344,
+            "peak_alloc_bytes": 33000888320,
+            "is_eval": false
+          },
+          {
+            "step": 22,
+            "t_s": 31.737802894786,
+            "alloc_bytes": 31943225344,
+            "peak_alloc_bytes": 33000888320,
+            "is_eval": false
+          },
+          {
+            "step": 23,
+            "t_s": 32.2976468000561,
+            "alloc_bytes": 31943225344,
+            "peak_alloc_bytes": 33000888320,
+            "is_eval": false
+          },
+          {
+            "step": 24,
+            "t_s": 32.85736274532974,
+            "alloc_bytes": 31943225344,
+            "peak_alloc_bytes": 33000888320,
+            "is_eval": false
+          },
+          {
+            "step": 25,
+            "t_s": 33.416835045441985,
+            "alloc_bytes": 31943225344,
+            "peak_alloc_bytes": 33000888320,
+            "is_eval": false
+          },
+          {
+            "step": 26,
+            "t_s": 33.97630040347576,
+            "alloc_bytes": 31943225344,
+            "peak_alloc_bytes": 33000888320,
+            "is_eval": false
+          },
+          {
+            "step": 27,
+            "t_s": 34.535817354917526,
+            "alloc_bytes": 31943225344,
+            "peak_alloc_bytes": 33000888320,
+            "is_eval": false
+          },
+          {
+            "step": 28,
+            "t_s": 35.095348335802555,
+            "alloc_bytes": 31943225344,
+            "peak_alloc_bytes": 33000888320,
+            "is_eval": false
+          },
+          {
+            "step": 29,
+            "t_s": 35.655894784256816,
+            "alloc_bytes": 31943225344,
+            "peak_alloc_bytes": 33000888320,
+            "is_eval": false
+          },
+          {
+            "step": 30,
+            "t_s": 36.21521615050733,
+            "alloc_bytes": 31943225344,
+            "peak_alloc_bytes": 33000888320,
+            "is_eval": false
+          },
+          {
+            "step": 31,
+            "t_s": 36.77515346929431,
+            "alloc_bytes": 31943225344,
+            "peak_alloc_bytes": 33000888320,
+            "is_eval": false
+          },
+          {
+            "step": 32,
+            "t_s": 37.59498316422105,
+            "alloc_bytes": 31944503808,
+            "peak_alloc_bytes": 37242471424,
+            "is_eval": true
+          }
+        ]
+      },
+      {
+        "prompt_id": 5,
+        "method": "pps",
+        "init_particles": 8,
+        "total_wall_s": 37.58485239930451,
+        "run_peak_alloc_bytes": 37418124800,
+        "run_peak_step": 8,
+        "run_peak_t_s": 19.02609782293439,
+        "offload_count": 0,
+        "offload_wall_s": 0.0,
+        "trace": [
+          {
+            "step": 1,
+            "t_s": 2.529949389398098,
+            "alloc_bytes": 32036401664,
+            "peak_alloc_bytes": 36240724480,
+            "is_eval": false
+          },
+          {
+            "step": 2,
+            "t_s": 4.743653973564506,
+            "alloc_bytes": 32039236096,
+            "peak_alloc_bytes": 36267053568,
+            "is_eval": false
+          },
+          {
+            "step": 3,
+            "t_s": 6.962791066616774,
+            "alloc_bytes": 32039744000,
+            "peak_alloc_bytes": 36270936576,
+            "is_eval": false
+          },
+          {
+            "step": 4,
+            "t_s": 9.178995553404093,
+            "alloc_bytes": 32039236096,
+            "peak_alloc_bytes": 36270395904,
+            "is_eval": false
+          },
+          {
+            "step": 5,
+            "t_s": 11.397302865982056,
+            "alloc_bytes": 32039547392,
+            "peak_alloc_bytes": 36269888000,
+            "is_eval": false
+          },
+          {
+            "step": 6,
+            "t_s": 13.613324251025915,
+            "alloc_bytes": 32038695424,
+            "peak_alloc_bytes": 36270199296,
+            "is_eval": false
+          },
+          {
+            "step": 7,
+            "t_s": 15.827896954491735,
+            "alloc_bytes": 32039236096,
+            "peak_alloc_bytes": 36269347328,
+            "is_eval": false
+          },
+          {
+            "step": 8,
+            "t_s": 19.02609782293439,
+            "alloc_bytes": 32078132736,
+            "peak_alloc_bytes": 37418124800,
+            "is_eval": true
+          },
+          {
+            "step": 9,
+            "t_s": 20.13140066154301,
+            "alloc_bytes": 32060764672,
+            "peak_alloc_bytes": 34189263360,
+            "is_eval": false
+          },
+          {
+            "step": 10,
+            "t_s": 21.236604848876595,
+            "alloc_bytes": 31991804416,
+            "peak_alloc_bytes": 34173993472,
+            "is_eval": false
+          },
+          {
+            "step": 11,
+            "t_s": 22.342598950490355,
+            "alloc_bytes": 31992574464,
+            "peak_alloc_bytes": 34107441664,
+            "is_eval": false
+          },
+          {
+            "step": 12,
+            "t_s": 23.447314960882068,
+            "alloc_bytes": 31991214592,
+            "peak_alloc_bytes": 34107900416,
+            "is_eval": false
+          },
+          {
+            "step": 13,
+            "t_s": 24.55559671111405,
+            "alloc_bytes": 31991263744,
+            "peak_alloc_bytes": 34106540544,
+            "is_eval": false
+          },
+          {
+            "step": 14,
+            "t_s": 25.661718213930726,
+            "alloc_bytes": 31991214592,
+            "peak_alloc_bytes": 34106589696,
+            "is_eval": false
+          },
+          {
+            "step": 15,
+            "t_s": 26.768401397392154,
+            "alloc_bytes": 31991525888,
+            "peak_alloc_bytes": 34106540544,
+            "is_eval": false
+          },
+          {
+            "step": 16,
+            "t_s": 28.37330693565309,
+            "alloc_bytes": 32012195328,
+            "peak_alloc_bytes": 37316871680,
+            "is_eval": true
+          },
+          {
+            "step": 17,
+            "t_s": 28.932373391464353,
+            "alloc_bytes": 32003019264,
+            "peak_alloc_bytes": 33066711552,
+            "is_eval": false
+          },
+          {
+            "step": 18,
+            "t_s": 29.49214875884354,
+            "alloc_bytes": 31967613440,
+            "peak_alloc_bytes": 33059633664,
+            "is_eval": false
+          },
+          {
+            "step": 19,
+            "t_s": 30.051560562103987,
+            "alloc_bytes": 31967613440,
+            "peak_alloc_bytes": 33025276416,
+            "is_eval": false
+          },
+          {
+            "step": 20,
+            "t_s": 30.611149087548256,
+            "alloc_bytes": 31967613440,
+            "peak_alloc_bytes": 33025276416,
+            "is_eval": false
+          },
+          {
+            "step": 21,
+            "t_s": 31.170443827286363,
+            "alloc_bytes": 31967613440,
+            "peak_alloc_bytes": 33025276416,
+            "is_eval": false
+          },
+          {
+            "step": 22,
+            "t_s": 31.7301657628268,
+            "alloc_bytes": 31967613440,
+            "peak_alloc_bytes": 33025276416,
+            "is_eval": false
+          },
+          {
+            "step": 23,
+            "t_s": 32.289819629862905,
+            "alloc_bytes": 31967613440,
+            "peak_alloc_bytes": 33025276416,
+            "is_eval": false
+          },
+          {
+            "step": 24,
+            "t_s": 32.84933941438794,
+            "alloc_bytes": 31967613440,
+            "peak_alloc_bytes": 33025276416,
+            "is_eval": false
+          },
+          {
+            "step": 25,
+            "t_s": 33.4090208299458,
+            "alloc_bytes": 31967613440,
+            "peak_alloc_bytes": 33025276416,
+            "is_eval": false
+          },
+          {
+            "step": 26,
+            "t_s": 33.96855056472123,
+            "alloc_bytes": 31967613440,
+            "peak_alloc_bytes": 33025276416,
+            "is_eval": false
+          },
+          {
+            "step": 27,
+            "t_s": 34.527640322223306,
+            "alloc_bytes": 31967613440,
+            "peak_alloc_bytes": 33025276416,
+            "is_eval": false
+          },
+          {
+            "step": 28,
+            "t_s": 35.087457571178675,
+            "alloc_bytes": 31967613440,
+            "peak_alloc_bytes": 33025276416,
+            "is_eval": false
+          },
+          {
+            "step": 29,
+            "t_s": 35.64767714589834,
+            "alloc_bytes": 31967613440,
+            "peak_alloc_bytes": 33025276416,
+            "is_eval": false
+          },
+          {
+            "step": 30,
+            "t_s": 36.20736366324127,
+            "alloc_bytes": 31967613440,
+            "peak_alloc_bytes": 33025276416,
+            "is_eval": false
+          },
+          {
+            "step": 31,
+            "t_s": 36.76679037697613,
+            "alloc_bytes": 31967613440,
+            "peak_alloc_bytes": 33025276416,
+            "is_eval": false
+          },
+          {
+            "step": 32,
+            "t_s": 37.584515703842044,
+            "alloc_bytes": 31968138240,
+            "peak_alloc_bytes": 37267498496,
+            "is_eval": true
+          }
+        ]
+      },
+      {
+        "prompt_id": 6,
+        "method": "pps",
+        "init_particles": 8,
+        "total_wall_s": 37.5832144767046,
+        "run_peak_alloc_bytes": 37440563200,
+        "run_peak_step": 8,
+        "run_peak_t_s": 19.026264682412148,
+        "offload_count": 0,
+        "offload_wall_s": 0.0,
+        "trace": [
+          {
+            "step": 1,
+            "t_s": 2.528730245307088,
+            "alloc_bytes": 32058135552,
+            "peak_alloc_bytes": 36263310336,
+            "is_eval": false
+          },
+          {
+            "step": 2,
+            "t_s": 4.744921263307333,
+            "alloc_bytes": 32062018560,
+            "peak_alloc_bytes": 36288787456,
+            "is_eval": false
+          },
+          {
+            "step": 3,
+            "t_s": 6.95915462076664,
+            "alloc_bytes": 32063050752,
+            "peak_alloc_bytes": 36292670464,
+            "is_eval": false
+          },
+          {
+            "step": 4,
+            "t_s": 9.177440885454416,
+            "alloc_bytes": 32062739456,
+            "peak_alloc_bytes": 36293702656,
+            "is_eval": false
+          },
+          {
+            "step": 5,
+            "t_s": 11.393181128427386,
+            "alloc_bytes": 32062329856,
+            "peak_alloc_bytes": 36293391360,
+            "is_eval": false
+          },
+          {
+            "step": 6,
+            "t_s": 13.610328365117311,
+            "alloc_bytes": 32062018560,
+            "peak_alloc_bytes": 36292981760,
+            "is_eval": false
+          },
+          {
+            "step": 7,
+            "t_s": 15.826784702017903,
+            "alloc_bytes": 32063050752,
+            "peak_alloc_bytes": 36293391360,
+            "is_eval": false
+          },
+          {
+            "step": 8,
+            "t_s": 19.026264682412148,
+            "alloc_bytes": 32101095424,
+            "peak_alloc_bytes": 37440563200,
+            "is_eval": true
+          },
+          {
+            "step": 9,
+            "t_s": 20.132704136893153,
+            "alloc_bytes": 32085365760,
+            "peak_alloc_bytes": 34213620736,
+            "is_eval": false
+          },
+          {
+            "step": 10,
+            "t_s": 21.237726848572493,
+            "alloc_bytes": 32017224704,
+            "peak_alloc_bytes": 34200333312,
+            "is_eval": false
+          },
+          {
+            "step": 11,
+            "t_s": 22.3429150916636,
+            "alloc_bytes": 32015864832,
+            "peak_alloc_bytes": 34133978112,
+            "is_eval": false
+          },
+          {
+            "step": 12,
+            "t_s": 23.44921873509884,
+            "alloc_bytes": 32016176128,
+            "peak_alloc_bytes": 34132026368,
+            "is_eval": false
+          },
+          {
+            "step": 13,
+            "t_s": 24.555875804275274,
+            "alloc_bytes": 32016126976,
+            "peak_alloc_bytes": 34132929536,
+            "is_eval": false
+          },
+          {
+            "step": 14,
+            "t_s": 25.66191796399653,
+            "alloc_bytes": 32016962560,
+            "peak_alloc_bytes": 34132288512,
+            "is_eval": false
+          },
+          {
+            "step": 15,
+            "t_s": 26.768799167126417,
+            "alloc_bytes": 32015078400,
+            "peak_alloc_bytes": 34133715968,
+            "is_eval": false
+          },
+          {
+            "step": 16,
+            "t_s": 28.374914564192295,
+            "alloc_bytes": 32037337088,
+            "peak_alloc_bytes": 37342898176,
+            "is_eval": true
+          },
+          {
+            "step": 17,
+            "t_s": 28.934322899207473,
+            "alloc_bytes": 32027735040,
+            "peak_alloc_bytes": 33092901888,
+            "is_eval": false
+          },
+          {
+            "step": 18,
+            "t_s": 29.492975533008575,
+            "alloc_bytes": 31991657472,
+            "peak_alloc_bytes": 33084349440,
+            "is_eval": false
+          },
+          {
+            "step": 19,
+            "t_s": 30.052443077787757,
+            "alloc_bytes": 31991804928,
+            "peak_alloc_bytes": 33049320448,
+            "is_eval": false
+          },
+          {
+            "step": 20,
+            "t_s": 30.611712550744414,
+            "alloc_bytes": 31991657472,
+            "peak_alloc_bytes": 33049467904,
+            "is_eval": false
+          },
+          {
+            "step": 21,
+            "t_s": 31.17120753787458,
+            "alloc_bytes": 31991804928,
+            "peak_alloc_bytes": 33049320448,
+            "is_eval": false
+          },
+          {
+            "step": 22,
+            "t_s": 31.7306008040905,
+            "alloc_bytes": 31991657472,
+            "peak_alloc_bytes": 33049467904,
+            "is_eval": false
+          },
+          {
+            "step": 23,
+            "t_s": 32.29011232033372,
+            "alloc_bytes": 31991804928,
+            "peak_alloc_bytes": 33049320448,
+            "is_eval": false
+          },
+          {
+            "step": 24,
+            "t_s": 32.84983264096081,
+            "alloc_bytes": 31991657472,
+            "peak_alloc_bytes": 33049467904,
+            "is_eval": false
+          },
+          {
+            "step": 25,
+            "t_s": 33.408436361700296,
+            "alloc_bytes": 31991804928,
+            "peak_alloc_bytes": 33049320448,
+            "is_eval": false
+          },
+          {
+            "step": 26,
+            "t_s": 33.96794247068465,
+            "alloc_bytes": 31991657472,
+            "peak_alloc_bytes": 33049467904,
+            "is_eval": false
+          },
+          {
+            "step": 27,
+            "t_s": 34.52722721360624,
+            "alloc_bytes": 31991804928,
+            "peak_alloc_bytes": 33049320448,
+            "is_eval": false
+          },
+          {
+            "step": 28,
+            "t_s": 35.08686910383403,
+            "alloc_bytes": 31991657472,
+            "peak_alloc_bytes": 33049467904,
+            "is_eval": false
+          },
+          {
+            "step": 29,
+            "t_s": 35.64615709707141,
+            "alloc_bytes": 31991804928,
+            "peak_alloc_bytes": 33049320448,
+            "is_eval": false
+          },
+          {
+            "step": 30,
+            "t_s": 36.2058879584074,
+            "alloc_bytes": 31991657472,
+            "peak_alloc_bytes": 33049467904,
+            "is_eval": false
+          },
+          {
+            "step": 31,
+            "t_s": 36.76553315669298,
+            "alloc_bytes": 31991804928,
+            "peak_alloc_bytes": 33049320448,
+            "is_eval": false
+          },
+          {
+            "step": 32,
+            "t_s": 37.582862462848425,
+            "alloc_bytes": 31992051200,
+            "peak_alloc_bytes": 37291378688,
+            "is_eval": true
+          }
+        ]
+      },
+      {
+        "prompt_id": 7,
+        "method": "pps",
+        "init_particles": 8,
+        "total_wall_s": 37.67754343152046,
+        "run_peak_alloc_bytes": 37467228672,
+        "run_peak_step": 8,
+        "run_peak_t_s": 19.115895215421915,
+        "offload_count": 0,
+        "offload_wall_s": 0.0,
+        "trace": [
+          {
+            "step": 1,
+            "t_s": 2.621836982667446,
+            "alloc_bytes": 32082048512,
+            "peak_alloc_bytes": 36287223296,
+            "is_eval": false
+          },
+          {
+            "step": 2,
+            "t_s": 4.836871903389692,
+            "alloc_bytes": 32086242816,
+            "peak_alloc_bytes": 36312700416,
+            "is_eval": false
+          },
+          {
+            "step": 3,
+            "t_s": 7.0547190345823765,
+            "alloc_bytes": 32086783488,
+            "peak_alloc_bytes": 36316894720,
+            "is_eval": false
+          },
+          {
+            "step": 4,
+            "t_s": 9.27094247750938,
+            "alloc_bytes": 32086242816,
+            "peak_alloc_bytes": 36317435392,
+            "is_eval": false
+          },
+          {
+            "step": 5,
+            "t_s": 11.485368721187115,
+            "alloc_bytes": 32086636032,
+            "peak_alloc_bytes": 36316894720,
+            "is_eval": false
+          },
+          {
+            "step": 6,
+            "t_s": 13.702578062191606,
+            "alloc_bytes": 32085931520,
+            "peak_alloc_bytes": 36317287936,
+            "is_eval": false
+          },
+          {
+            "step": 7,
+            "t_s": 15.920598147436976,
+            "alloc_bytes": 32086636032,
+            "peak_alloc_bytes": 36316583424,
+            "is_eval": false
+          },
+          {
+            "step": 8,
+            "t_s": 19.115895215421915,
+            "alloc_bytes": 32126810624,
+            "peak_alloc_bytes": 37467228672,
+            "is_eval": true
+          },
+          {
+            "step": 9,
+            "t_s": 20.22055433690548,
+            "alloc_bytes": 32110294528,
+            "peak_alloc_bytes": 34237941248,
+            "is_eval": false
+          },
+          {
+            "step": 10,
+            "t_s": 21.328100545331836,
+            "alloc_bytes": 32041104896,
+            "peak_alloc_bytes": 34223261184,
+            "is_eval": false
+          },
+          {
+            "step": 11,
+            "t_s": 22.433612821623683,
+            "alloc_bytes": 32041268736,
+            "peak_alloc_bytes": 34156430848,
+            "is_eval": false
+          },
+          {
+            "step": 12,
+            "t_s": 23.54001508280635,
+            "alloc_bytes": 32040580608,
+            "peak_alloc_bytes": 34156905984,
+            "is_eval": false
+          },
+          {
+            "step": 13,
+            "t_s": 24.64570302143693,
+            "alloc_bytes": 32041580032,
+            "peak_alloc_bytes": 34155906560,
+            "is_eval": false
+          },
+          {
+            "step": 14,
+            "t_s": 25.750968454405665,
+            "alloc_bytes": 32041006592,
+            "peak_alloc_bytes": 34156905984,
+            "is_eval": false
+          },
+          {
+            "step": 15,
+            "t_s": 26.85648950189352,
+            "alloc_bytes": 32040842752,
+            "peak_alloc_bytes": 34156332544,
+            "is_eval": false
+          },
+          {
+            "step": 16,
+            "t_s": 28.463268587365746,
+            "alloc_bytes": 32059808256,
+            "peak_alloc_bytes": 37369055744,
+            "is_eval": true
+          },
+          {
+            "step": 17,
+            "t_s": 29.022667936980724,
+            "alloc_bytes": 31978860544,
+            "peak_alloc_bytes": 33044011008,
+            "is_eval": false
+          },
+          {
+            "step": 18,
+            "t_s": 29.58216137625277,
+            "alloc_bytes": 31943192576,
+            "peak_alloc_bytes": 33036097536,
+            "is_eval": false
+          },
+          {
+            "step": 19,
+            "t_s": 30.142333457246423,
+            "alloc_bytes": 31943192576,
+            "peak_alloc_bytes": 33001478144,
+            "is_eval": false
+          },
+          {
+            "step": 20,
+            "t_s": 30.70217266306281,
+            "alloc_bytes": 31943192576,
+            "peak_alloc_bytes": 33001478144,
+            "is_eval": false
+          },
+          {
+            "step": 21,
+            "t_s": 31.262965774163604,
+            "alloc_bytes": 31943192576,
+            "peak_alloc_bytes": 33001478144,
+            "is_eval": false
+          },
+          {
+            "step": 22,
+            "t_s": 31.822911892086267,
+            "alloc_bytes": 31943192576,
+            "peak_alloc_bytes": 33001478144,
+            "is_eval": false
+          },
+          {
+            "step": 23,
+            "t_s": 32.38251699320972,
+            "alloc_bytes": 31943192576,
+            "peak_alloc_bytes": 33001478144,
+            "is_eval": false
+          },
+          {
+            "step": 24,
+            "t_s": 32.94167115725577,
+            "alloc_bytes": 31943192576,
+            "peak_alloc_bytes": 33001478144,
+            "is_eval": false
+          },
+          {
+            "step": 25,
+            "t_s": 33.501338789239526,
+            "alloc_bytes": 31943192576,
+            "peak_alloc_bytes": 33001478144,
+            "is_eval": false
+          },
+          {
+            "step": 26,
+            "t_s": 34.060919001698494,
+            "alloc_bytes": 31943192576,
+            "peak_alloc_bytes": 33001478144,
+            "is_eval": false
+          },
+          {
+            "step": 27,
+            "t_s": 34.62095396965742,
+            "alloc_bytes": 31943192576,
+            "peak_alloc_bytes": 33001478144,
+            "is_eval": false
+          },
+          {
+            "step": 28,
+            "t_s": 35.18055637180805,
+            "alloc_bytes": 31943192576,
+            "peak_alloc_bytes": 33001478144,
+            "is_eval": false
+          },
+          {
+            "step": 29,
+            "t_s": 35.740304607898,
+            "alloc_bytes": 31943192576,
+            "peak_alloc_bytes": 33001478144,
+            "is_eval": false
+          },
+          {
+            "step": 30,
+            "t_s": 36.300102991983294,
+            "alloc_bytes": 31943192576,
+            "peak_alloc_bytes": 33001478144,
+            "is_eval": false
+          },
+          {
+            "step": 31,
+            "t_s": 36.859361588954926,
+            "alloc_bytes": 31943192576,
+            "peak_alloc_bytes": 33001478144,
+            "is_eval": false
+          },
+          {
+            "step": 32,
+            "t_s": 37.67722218669951,
+            "alloc_bytes": 31945126400,
+            "peak_alloc_bytes": 37243405312,
+            "is_eval": true
+          }
+        ]
+      },
+      {
+        "prompt_id": 8,
+        "method": "pps",
+        "init_particles": 8,
+        "total_wall_s": 37.583700530231,
+        "run_peak_alloc_bytes": 37416617472,
+        "run_peak_step": 8,
+        "run_peak_t_s": 19.02216183207929,
+        "offload_count": 0,
+        "offload_wall_s": 0.0,
+        "trace": [
+          {
+            "step": 1,
+            "t_s": 2.533805426210165,
+            "alloc_bytes": 32036172288,
+            "peak_alloc_bytes": 36241347072,
+            "is_eval": false
+          },
+          {
+            "step": 2,
+            "t_s": 4.7473418060690165,
+            "alloc_bytes": 32040759808,
+            "peak_alloc_bytes": 36268470784,
+            "is_eval": false
+          },
+          {
+            "step": 3,
+            "t_s": 6.9589636735618114,
+            "alloc_bytes": 32039399936,
+            "peak_alloc_bytes": 36272009728,
+            "is_eval": false
+          },
+          {
+            "step": 4,
+            "t_s": 9.17471913062036,
+            "alloc_bytes": 32040366592,
+            "peak_alloc_bytes": 36271698432,
+            "is_eval": false
+          },
+          {
+            "step": 5,
+            "t_s": 11.39261663518846,
+            "alloc_bytes": 32040759808,
+            "peak_alloc_bytes": 36272665088,
+            "is_eval": false
+          },
+          {
+            "step": 6,
+            "t_s": 13.609276257455349,
+            "alloc_bytes": 32040055296,
+            "peak_alloc_bytes": 36272009728,
+            "is_eval": false
+          },
+          {
+            "step": 7,
+            "t_s": 15.824474357068539,
+            "alloc_bytes": 32041808384,
+            "peak_alloc_bytes": 36272353792,
+            "is_eval": false
+          },
+          {
+            "step": 8,
+            "t_s": 19.02216183207929,
+            "alloc_bytes": 32078509568,
+            "peak_alloc_bytes": 37416617472,
+            "is_eval": true
+          },
+          {
+            "step": 9,
+            "t_s": 20.12795475870371,
+            "alloc_bytes": 32061649408,
+            "peak_alloc_bytes": 34189951488,
+            "is_eval": false
+          },
+          {
+            "step": 10,
+            "t_s": 21.23404465802014,
+            "alloc_bytes": 31992558080,
+            "peak_alloc_bytes": 34175420928,
+            "is_eval": false
+          },
+          {
+            "step": 11,
+            "t_s": 22.341220419853926,
+            "alloc_bytes": 31992361472,
+            "peak_alloc_bytes": 34107884032,
+            "is_eval": false
+          },
+          {
+            "step": 12,
+            "t_s": 23.44648771546781,
+            "alloc_bytes": 31992607232,
+            "peak_alloc_bytes": 34107998720,
+            "is_eval": false
+          },
+          {
+            "step": 13,
+            "t_s": 24.552067808806896,
+            "alloc_bytes": 31992033792,
+            "peak_alloc_bytes": 34107933184,
+            "is_eval": false
+          },
+          {
+            "step": 14,
+            "t_s": 25.659247238188982,
+            "alloc_bytes": 31992672768,
+            "peak_alloc_bytes": 34107671040,
+            "is_eval": false
+          },
+          {
+            "step": 15,
+            "t_s": 26.764370374381542,
+            "alloc_bytes": 31992820224,
+            "peak_alloc_bytes": 34107998720,
+            "is_eval": false
+          },
+          {
+            "step": 16,
+            "t_s": 28.36902737431228,
+            "alloc_bytes": 32012080640,
+            "peak_alloc_bytes": 37317051904,
+            "is_eval": true
+          },
+          {
+            "step": 17,
+            "t_s": 28.92816248163581,
+            "alloc_bytes": 32002937344,
+            "peak_alloc_bytes": 33067715072,
+            "is_eval": false
+          },
+          {
+            "step": 18,
+            "t_s": 29.487384090200067,
+            "alloc_bytes": 31967793664,
+            "peak_alloc_bytes": 33059551744,
+            "is_eval": false
+          },
+          {
+            "step": 19,
+            "t_s": 30.047126606106758,
+            "alloc_bytes": 31968317952,
+            "peak_alloc_bytes": 33025456640,
+            "is_eval": false
+          },
+          {
+            "step": 20,
+            "t_s": 30.607312759384513,
+            "alloc_bytes": 31967793664,
+            "peak_alloc_bytes": 33025980928,
+            "is_eval": false
+          },
+          {
+            "step": 21,
+            "t_s": 31.167001146823168,
+            "alloc_bytes": 31968317952,
+            "peak_alloc_bytes": 33025456640,
+            "is_eval": false
+          },
+          {
+            "step": 22,
+            "t_s": 31.72660282999277,
+            "alloc_bytes": 31967793664,
+            "peak_alloc_bytes": 33025980928,
+            "is_eval": false
+          },
+          {
+            "step": 23,
+            "t_s": 32.28602738119662,
+            "alloc_bytes": 31968317952,
+            "peak_alloc_bytes": 33025456640,
+            "is_eval": false
+          },
+          {
+            "step": 24,
+            "t_s": 32.845805678516626,
+            "alloc_bytes": 31967793664,
+            "peak_alloc_bytes": 33025980928,
+            "is_eval": false
+          },
+          {
+            "step": 25,
+            "t_s": 33.405306031927466,
+            "alloc_bytes": 31968317952,
+            "peak_alloc_bytes": 33025456640,
+            "is_eval": false
+          },
+          {
+            "step": 26,
+            "t_s": 33.965372283011675,
+            "alloc_bytes": 31967793664,
+            "peak_alloc_bytes": 33025980928,
+            "is_eval": false
+          },
+          {
+            "step": 27,
+            "t_s": 34.525180311873555,
+            "alloc_bytes": 31968317952,
+            "peak_alloc_bytes": 33025456640,
+            "is_eval": false
+          },
+          {
+            "step": 28,
+            "t_s": 35.08538245782256,
+            "alloc_bytes": 31967793664,
+            "peak_alloc_bytes": 33025980928,
+            "is_eval": false
+          },
+          {
+            "step": 29,
+            "t_s": 35.64510488323867,
+            "alloc_bytes": 31968317952,
+            "peak_alloc_bytes": 33025456640,
+            "is_eval": false
+          },
+          {
+            "step": 30,
+            "t_s": 36.204933822155,
+            "alloc_bytes": 31967793664,
+            "peak_alloc_bytes": 33025980928,
+            "is_eval": false
+          },
+          {
+            "step": 31,
+            "t_s": 36.76486310176551,
+            "alloc_bytes": 31968317952,
+            "peak_alloc_bytes": 33025456640,
+            "is_eval": false
+          },
+          {
+            "step": 32,
+            "t_s": 37.58340986445546,
+            "alloc_bytes": 31968711680,
+            "peak_alloc_bytes": 37266875904,
+            "is_eval": true
+          }
+        ]
+      },
+      {
+        "prompt_id": 9,
+        "method": "pps",
+        "init_particles": 8,
+        "total_wall_s": 37.6001095212996,
+        "run_peak_alloc_bytes": 37440497664,
+        "run_peak_step": 8,
+        "run_peak_t_s": 19.038927901536226,
+        "offload_count": 0,
+        "offload_wall_s": 0.0,
+        "trace": [
+          {
+            "step": 1,
+            "t_s": 2.5442159604281187,
+            "alloc_bytes": 32058397696,
+            "peak_alloc_bytes": 36263883776,
+            "is_eval": false
+          },
+          {
+            "step": 2,
+            "t_s": 4.759340826421976,
+            "alloc_bytes": 32063706112,
+            "peak_alloc_bytes": 36289442816,
+            "is_eval": false
+          },
+          {
+            "step": 3,
+            "t_s": 6.97566057369113,
+            "alloc_bytes": 32063312896,
+            "peak_alloc_bytes": 36294358016,
+            "is_eval": false
+          },
+          {
+            "step": 4,
+            "t_s": 9.192375916987658,
+            "alloc_bytes": 32062592000,
+            "peak_alloc_bytes": 36293964800,
+            "is_eval": false
+          },
+          {
+            "step": 5,
+            "t_s": 11.40584603883326,
+            "alloc_bytes": 32062592000,
+            "peak_alloc_bytes": 36293243904,
+            "is_eval": false
+          },
+          {
+            "step": 6,
+            "t_s": 13.62509917654097,
+            "alloc_bytes": 32062985216,
+            "peak_alloc_bytes": 36293637120,
+            "is_eval": false
+          },
+          {
+            "step": 7,
+            "t_s": 15.843884766101837,
+            "alloc_bytes": 32062592000,
+            "peak_alloc_bytes": 36293637120,
+            "is_eval": false
+          },
+          {
+            "step": 8,
+            "t_s": 19.038927901536226,
+            "alloc_bytes": 32101685248,
+            "peak_alloc_bytes": 37440497664,
+            "is_eval": true
+          },
+          {
+            "step": 9,
+            "t_s": 20.14427661523223,
+            "alloc_bytes": 32085300224,
+            "peak_alloc_bytes": 34212815872,
+            "is_eval": false
+          },
+          {
+            "step": 10,
+            "t_s": 21.25238491408527,
+            "alloc_bytes": 32016241664,
+            "peak_alloc_bytes": 34199053312,
+            "is_eval": false
+          },
+          {
+            "step": 11,
+            "t_s": 22.358704816550016,
+            "alloc_bytes": 32016110592,
+            "peak_alloc_bytes": 34132296704,
+            "is_eval": false
+          },
+          {
+            "step": 12,
+            "t_s": 23.46424854360521,
+            "alloc_bytes": 32016618496,
+            "peak_alloc_bytes": 34131960832,
+            "is_eval": false
+          },
+          {
+            "step": 13,
+            "t_s": 24.57120071351528,
+            "alloc_bytes": 32016143360,
+            "peak_alloc_bytes": 34132468736,
+            "is_eval": false
+          },
+          {
+            "step": 14,
+            "t_s": 25.678127424791455,
+            "alloc_bytes": 32016372736,
+            "peak_alloc_bytes": 34131993600,
+            "is_eval": false
+          },
+          {
+            "step": 15,
+            "t_s": 26.783508889377117,
+            "alloc_bytes": 32016356352,
+            "peak_alloc_bytes": 34132222976,
+            "is_eval": false
+          },
+          {
+            "step": 16,
+            "t_s": 28.389318097382784,
+            "alloc_bytes": 32037337088,
+            "peak_alloc_bytes": 37343078400,
+            "is_eval": true
+          },
+          {
+            "step": 17,
+            "t_s": 28.94821635261178,
+            "alloc_bytes": 32027276288,
+            "peak_alloc_bytes": 33092049920,
+            "is_eval": false
+          },
+          {
+            "step": 18,
+            "t_s": 29.507922479882836,
+            "alloc_bytes": 31992378368,
+            "peak_alloc_bytes": 33084152832,
+            "is_eval": false
+          },
+          {
+            "step": 19,
+            "t_s": 30.06727053411305,
+            "alloc_bytes": 31991870464,
+            "peak_alloc_bytes": 33050041344,
+            "is_eval": false
+          },
+          {
+            "step": 20,
+            "t_s": 30.626884780824184,
+            "alloc_bytes": 31992345600,
+            "peak_alloc_bytes": 33049795584,
+            "is_eval": false
+          },
+          {
+            "step": 21,
+            "t_s": 31.18653192743659,
+            "alloc_bytes": 31991870464,
+            "peak_alloc_bytes": 33050008576,
+            "is_eval": false
+          },
+          {
+            "step": 22,
+            "t_s": 31.746100844815373,
+            "alloc_bytes": 31992345600,
+            "peak_alloc_bytes": 33049795584,
+            "is_eval": false
+          },
+          {
+            "step": 23,
+            "t_s": 32.30560939013958,
+            "alloc_bytes": 31991870464,
+            "peak_alloc_bytes": 33050008576,
+            "is_eval": false
+          },
+          {
+            "step": 24,
+            "t_s": 32.86477018892765,
+            "alloc_bytes": 31992345600,
+            "peak_alloc_bytes": 33049795584,
+            "is_eval": false
+          },
+          {
+            "step": 25,
+            "t_s": 33.42449806816876,
+            "alloc_bytes": 31991870464,
+            "peak_alloc_bytes": 33050008576,
+            "is_eval": false
+          },
+          {
+            "step": 26,
+            "t_s": 33.983954664319754,
+            "alloc_bytes": 31992345600,
+            "peak_alloc_bytes": 33049795584,
+            "is_eval": false
+          },
+          {
+            "step": 27,
+            "t_s": 34.54374046437442,
+            "alloc_bytes": 31991870464,
+            "peak_alloc_bytes": 33050008576,
+            "is_eval": false
+          },
+          {
+            "step": 28,
+            "t_s": 35.103140046820045,
+            "alloc_bytes": 31992345600,
+            "peak_alloc_bytes": 33049795584,
+            "is_eval": false
+          },
+          {
+            "step": 29,
+            "t_s": 35.66264203377068,
+            "alloc_bytes": 31991870464,
+            "peak_alloc_bytes": 33050008576,
+            "is_eval": false
+          },
+          {
+            "step": 30,
+            "t_s": 36.222435204312205,
+            "alloc_bytes": 31992345600,
+            "peak_alloc_bytes": 33049795584,
+            "is_eval": false
+          },
+          {
+            "step": 31,
+            "t_s": 36.781671945005655,
+            "alloc_bytes": 31991870464,
+            "peak_alloc_bytes": 33050008576,
+            "is_eval": false
+          },
+          {
+            "step": 32,
+            "t_s": 37.59977554529905,
+            "alloc_bytes": 31992854016,
+            "peak_alloc_bytes": 37291313152,
+            "is_eval": true
+          }
+        ]
+      },
+      {
+        "prompt_id": 10,
+        "method": "pps",
+        "init_particles": 8,
+        "total_wall_s": 37.58578197285533,
+        "run_peak_alloc_bytes": 37465868800,
+        "run_peak_step": 8,
+        "run_peak_t_s": 19.0225149076432,
+        "offload_count": 0,
+        "offload_wall_s": 0.0,
+        "trace": [
+          {
+            "step": 1,
+            "t_s": 2.5282376892864704,
+            "alloc_bytes": 32083064320,
+            "peak_alloc_bytes": 36288026112,
+            "is_eval": false
+          },
+          {
+            "step": 2,
+            "t_s": 4.741692679002881,
+            "alloc_bytes": 32086734336,
+            "peak_alloc_bytes": 36313716224,
+            "is_eval": false
+          },
+          {
+            "step": 3,
+            "t_s": 6.959499320015311,
+            "alloc_bytes": 32087258624,
+            "peak_alloc_bytes": 36317386240,
+            "is_eval": false
+          },
+          {
+            "step": 4,
+            "t_s": 9.17547981068492,
+            "alloc_bytes": 32086734336,
+            "peak_alloc_bytes": 36317910528,
+            "is_eval": false
+          },
+          {
+            "step": 5,
+            "t_s": 11.393750682473183,
+            "alloc_bytes": 32087258624,
+            "peak_alloc_bytes": 36317386240,
+            "is_eval": false
+          },
+          {
+            "step": 6,
+            "t_s": 13.60828335210681,
+            "alloc_bytes": 32087258624,
+            "peak_alloc_bytes": 36317910528,
+            "is_eval": false
+          },
+          {
+            "step": 7,
+            "t_s": 15.8268431276083,
+            "alloc_bytes": 32086734336,
+            "peak_alloc_bytes": 36317910528,
+            "is_eval": false
+          },
+          {
+            "step": 8,
+            "t_s": 19.0225149076432,
+            "alloc_bytes": 32126269952,
+            "peak_alloc_bytes": 37465868800,
+            "is_eval": true
+          },
+          {
+            "step": 9,
+            "t_s": 20.127440409734845,
+            "alloc_bytes": 32109065728,
+            "peak_alloc_bytes": 34237474304,
+            "is_eval": false
+          },
+          {
+            "step": 10,
+            "t_s": 21.23368120379746,
+            "alloc_bytes": 32039876096,
+            "peak_alloc_bytes": 34222368256,
+            "is_eval": false
+          },
+          {
+            "step": 11,
+            "t_s": 22.34195863083005,
+            "alloc_bytes": 32040367616,
+            "peak_alloc_bytes": 34155202048,
+            "is_eval": false
+          },
+          {
+            "step": 12,
+            "t_s": 23.448513420298696,
+            "alloc_bytes": 32040941056,
+            "peak_alloc_bytes": 34156217856,
+            "is_eval": false
+          },
+          {
+            "step": 13,
+            "t_s": 24.55678871832788,
+            "alloc_bytes": 32040826368,
+            "peak_alloc_bytes": 34156267008,
+            "is_eval": false
+          },
+          {
+            "step": 14,
+            "t_s": 25.6628858409822,
+            "alloc_bytes": 32040465920,
+            "peak_alloc_bytes": 34156152320,
+            "is_eval": false
+          },
+          {
+            "step": 15,
+            "t_s": 26.768087336793542,
+            "alloc_bytes": 32041367040,
+            "peak_alloc_bytes": 34155791872,
+            "is_eval": false
+          },
+          {
+            "step": 16,
+            "t_s": 28.37243551760912,
+            "alloc_bytes": 32060627456,
+            "peak_alloc_bytes": 37365156352,
+            "is_eval": true
+          },
+          {
+            "step": 17,
+            "t_s": 28.93084649555385,
+            "alloc_bytes": 32051877376,
+            "peak_alloc_bytes": 33115143680,
+            "is_eval": false
+          },
+          {
+            "step": 18,
+            "t_s": 29.490528957918286,
+            "alloc_bytes": 32015898112,
+            "peak_alloc_bytes": 33108753920,
+            "is_eval": false
+          },
+          {
+            "step": 19,
+            "t_s": 30.050048235803843,
+            "alloc_bytes": 32016684544,
+            "peak_alloc_bytes": 33074546176,
+            "is_eval": false
+          },
+          {
+            "step": 20,
+            "t_s": 30.609476963058114,
+            "alloc_bytes": 32015898112,
+            "peak_alloc_bytes": 33075594752,
+            "is_eval": false
+          },
+          {
+            "step": 21,
+            "t_s": 31.16912312246859,
+            "alloc_bytes": 32016684544,
+            "peak_alloc_bytes": 33074546176,
+            "is_eval": false
+          },
+          {
+            "step": 22,
+            "t_s": 31.72876901179552,
+            "alloc_bytes": 32015898112,
+            "peak_alloc_bytes": 33075594752,
+            "is_eval": false
+          },
+          {
+            "step": 23,
+            "t_s": 32.28847224265337,
+            "alloc_bytes": 32016684544,
+            "peak_alloc_bytes": 33074546176,
+            "is_eval": false
+          },
+          {
+            "step": 24,
+            "t_s": 32.84856239147484,
+            "alloc_bytes": 32015898112,
+            "peak_alloc_bytes": 33075594752,
+            "is_eval": false
+          },
+          {
+            "step": 25,
+            "t_s": 33.40808480978012,
+            "alloc_bytes": 32016684544,
+            "peak_alloc_bytes": 33074546176,
+            "is_eval": false
+          },
+          {
+            "step": 26,
+            "t_s": 33.96782784163952,
+            "alloc_bytes": 32015898112,
+            "peak_alloc_bytes": 33075594752,
+            "is_eval": false
+          },
+          {
+            "step": 27,
+            "t_s": 34.52794422954321,
+            "alloc_bytes": 32016684544,
+            "peak_alloc_bytes": 33074546176,
+            "is_eval": false
+          },
+          {
+            "step": 28,
+            "t_s": 35.087825894355774,
+            "alloc_bytes": 32015898112,
+            "peak_alloc_bytes": 33075594752,
+            "is_eval": false
+          },
+          {
+            "step": 29,
+            "t_s": 35.64707652665675,
+            "alloc_bytes": 32016684544,
+            "peak_alloc_bytes": 33074546176,
+            "is_eval": false
+          },
+          {
+            "step": 30,
+            "t_s": 36.20689473114908,
+            "alloc_bytes": 32015898112,
+            "peak_alloc_bytes": 33075594752,
+            "is_eval": false
+          },
+          {
+            "step": 31,
+            "t_s": 36.76711445115507,
+            "alloc_bytes": 32016684544,
+            "peak_alloc_bytes": 33074546176,
+            "is_eval": false
+          },
+          {
+            "step": 32,
+            "t_s": 37.58547844737768,
+            "alloc_bytes": 32016848896,
+            "peak_alloc_bytes": 37314914816,
+            "is_eval": true
+          }
+        ]
+      }
+    ]
+  }
+}

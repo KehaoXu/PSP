@@ -1,0 +1,59 @@
+You are generating prompt expansions for GenEval while preserving the original scoring constraints.
+
+Goal:
+- For each original GenEval prompt entry, create exactly 24 prompt expansions.
+- Expansions should be semantically equivalent and constraint-preserving, but diverse enough to encourage different images under the same initial noise.
+
+Input file:
+- geneval_metadata.jsonl (one JSON object per line).
+
+Output file:
+- geneval_metadata_multiprompts.json
+- Must be a valid JSON array.
+
+Required output schema (per original prompt entry):
+{
+  "prompt_id": <int>,
+  "tag": <string>,
+  "include": <original include array>,
+  "exclude": <original exclude array, if present>,
+  "original_prompt": <string>,
+  "expansions": [
+    {"prompt_expansion_id": 0, "prompt": <string>},
+    {"prompt_expansion_id": 1, "prompt": <string>},
+    ...
+    {"prompt_expansion_id": 23, "prompt": <string>}
+  ]
+}
+
+Hard requirements:
+1) Keep constraints identical to original entry:
+   - same object classes
+   - same counts
+   - same color requirements
+   - same positional relations (left/right/above/below) when present
+   - never add contradictory constraints
+2) Create exactly 24 expansions for each prompt_id.
+3) Use unique prompt_expansion_id values 0..23.
+4) Make expansions meaningfully different from each other:
+   - vary composition, camera framing, distance, angle, lighting, scene context, background style
+   - do NOT change required semantic constraints
+5) Prompt length:
+   - target 35-45 words
+   - hard cap 50 words per expanded prompt
+6) Output strictly valid JSON only (no markdown, no commentary).
+
+Diversity guidance:
+- Mix close-up, medium, wide shots.
+- Vary environment (studio, outdoor, indoor, urban, natural) where compatible.
+- Vary lighting (soft daylight, overcast, warm indoor, dramatic side light), without changing semantics.
+- Vary descriptive style while preserving all required objects/attributes/relations.
+
+Validation checklist before final output:
+- JSON parses.
+- Number of entries equals number of input prompts.
+- Each entry has 24 expansions.
+- Expansion IDs are exactly 0..23.
+- All prompts are <= 50 words.
+- Constraints preserved for each prompt_id.
+

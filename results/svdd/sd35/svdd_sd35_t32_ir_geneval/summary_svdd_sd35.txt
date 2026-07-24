@@ -1,0 +1,9 @@
+DSearch root: /home/rogerio-lab/PycharmProjects/feature_fk_search/results_local/svdd/sd35/svdd_sd35_t32_ir_geneval
+Guidance metric: IR
+
+Per-seed results:
+- seed=42: IR_mean=1.113469, GenEval=0.719184, prompts=553, shards=8
+- seed=43: IR_mean=1.118819, GenEval=0.716119, prompts=553, shards=8
+- seed=44: IR_mean=1.108192, GenEval=0.721071, prompts=553, shards=8
+
+Mean across seeds: IR_mean=1.113494 (std=0.004338), GenEval=0.718791 (std=0.002041)

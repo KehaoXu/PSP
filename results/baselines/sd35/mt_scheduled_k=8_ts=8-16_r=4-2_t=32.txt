@@ -1,0 +1,37 @@
+sd35 MT Scheduled Baseline
+==========================
+
+Args
+----
+{
+  "cutoff_times": [
+    8,
+    16
+  ],
+  "geneval_csv": "/media/rogerio-lab/rogerio_ssd1/projects/feature_fk_search/results/reward_signal/sd35_reward_signal/sd35_geneval_sample_scores.csv",
+  "k_init": 8,
+  "logical_seeds": [
+    0,
+    1,
+    2
+  ],
+  "model_label": "sd35",
+  "num_seeds": 3,
+  "output_dir": "/media/rogerio-lab/rogerio_ssd1/projects/feature_fk_search/results/baselines/sd35",
+  "remaining_particles": [
+    4,
+    2
+  ],
+  "rewards_root": "/media/rogerio-lab/rogerio_ssd1/projects/feature_fk_search/results/reward_signal/sd35_reward_signal",
+  "total_steps": 32
+}
+
+Per-seed results
+----------------
+seed=0  particles=0..7       prompts=553  IR=1.376064 HPS=0.315547 GenEvalOverall@IR=0.749081 GenEvalOverall@HPS=0.740747
+seed=1  particles=8..15      prompts=553  IR=1.386457 HPS=0.315800 GenEvalOverall@IR=0.739153 GenEvalOverall@HPS=0.772096
+seed=2  particles=16..23     prompts=553  IR=1.376942 HPS=0.316057 GenEvalOverall@IR=0.751564 GenEvalOverall@HPS=0.746637
+
+Mean across seeds
+-----------------
+IR=1.379821 HPS=0.315801 GenEvalOverall@IR=0.746599 GenEvalOverall@HPS=0.753160

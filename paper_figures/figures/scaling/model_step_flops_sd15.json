@@ -1,0 +1,13 @@
+{
+  "model": "sd15",
+  "hf_id": "runwayml/stable-diffusion-v1-5",
+  "device": "cuda",
+  "dtype": "torch.float16",
+  "denoiser_module": "unet",
+  "one_step_flops": 677337661761,
+  "one_step_gflops": 677.337661761,
+  "one_step_tflops": 0.677337661761,
+  "num_parameters": 859520964,
+  "num_trainable_parameters": 859520964,
+  "notes": "FLOPs computed via torch.profiler(with_flops=True) on one denoiser forward step."
+}

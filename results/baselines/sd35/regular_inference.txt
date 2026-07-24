@@ -1,0 +1,28 @@
+sd35 Regular Inference Baseline
+===============================
+
+Args
+----
+{
+  "geneval_csv": "/media/rogerio-lab/rogerio_ssd1/projects/feature_fk_search/results/reward_signal/sd35_reward_signal/sd35_geneval_sample_scores.csv",
+  "logical_seeds": [
+    0,
+    1,
+    2
+  ],
+  "model_label": "sd35",
+  "n": 4,
+  "num_seeds": 3,
+  "output_dir": "/media/rogerio-lab/rogerio_ssd1/projects/feature_fk_search/results/baselines/sd35",
+  "rewards_root": "/media/rogerio-lab/rogerio_ssd1/projects/feature_fk_search/results/reward_signal/sd35_reward_signal"
+}
+
+Per-seed results
+----------------
+seed=0  particles=0          prompts=553  IR=1.049461 HPS=0.296936 GenEvalOverall=0.714120 GenEvalOverall@IR=0.714120 GenEvalOverall@HPS=0.714120
+seed=1  particles=1          prompts=553  IR=1.029096 HPS=0.297135 GenEvalOverall=0.702016 GenEvalOverall@IR=0.702016 GenEvalOverall@HPS=0.702016
+seed=2  particles=2          prompts=553  IR=1.055398 HPS=0.296228 GenEvalOverall=0.722786 GenEvalOverall@IR=0.722786 GenEvalOverall@HPS=0.722786
+
+Mean across seeds
+-----------------
+IR=1.044652 HPS=0.296767 GenEvalOverall=0.712974 GenEvalOverall@IR=0.712974 GenEvalOverall@HPS=0.712974

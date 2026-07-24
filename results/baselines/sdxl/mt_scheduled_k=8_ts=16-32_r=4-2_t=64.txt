@@ -1,0 +1,37 @@
+sdxl MT Scheduled Baseline
+==========================
+
+Args
+----
+{
+  "cutoff_times": [
+    16,
+    32
+  ],
+  "geneval_csv": "/media/rogerio-lab/rogerio_ssd1/projects/feature_fk_search/results/reward_signal/sdxl_reward_signal/sdxl_geneval_sample_scores.csv",
+  "k_init": 8,
+  "logical_seeds": [
+    0,
+    1,
+    2
+  ],
+  "model_label": "sdxl",
+  "num_seeds": 3,
+  "output_dir": "/media/rogerio-lab/rogerio_ssd1/projects/feature_fk_search/results/baselines/sdxl",
+  "remaining_particles": [
+    4,
+    2
+  ],
+  "rewards_root": "/media/rogerio-lab/rogerio_ssd1/projects/feature_fk_search/results/reward_signal/sdxl_reward_signal",
+  "total_steps": 64
+}
+
+Per-seed results
+----------------
+seed=0  particles=0..7       prompts=553  IR=1.221062 HPS=0.303490 GenEvalOverall@IR=0.647098 GenEvalOverall@HPS=0.627570
+seed=1  particles=8..15      prompts=553  IR=1.233311 HPS=0.303424 GenEvalOverall@IR=0.660121 GenEvalOverall@HPS=0.628143
+seed=2  particles=16..23     prompts=553  IR=1.217131 HPS=0.303588 GenEvalOverall@IR=0.627604 GenEvalOverall@HPS=0.618828
+
+Mean across seeds
+-----------------
+IR=1.223835 HPS=0.303500 GenEvalOverall@IR=0.644941 GenEvalOverall@HPS=0.624847

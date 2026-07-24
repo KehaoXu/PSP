@@ -1,0 +1,13 @@
+{
+  "model": "sd35",
+  "hf_id": "stabilityai/stable-diffusion-3.5-large",
+  "device": "cuda",
+  "dtype": "torch.bfloat16",
+  "denoiser_module": "transformer",
+  "one_step_flops": 22923679977681,
+  "one_step_gflops": 22923.679977681,
+  "one_step_tflops": 22.923679977681,
+  "num_parameters": 8056627520,
+  "num_trainable_parameters": 8056627520,
+  "notes": "FLOPs computed via torch.profiler(with_flops=True) on one denoiser forward step."
+}

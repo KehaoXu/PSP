@@ -1,0 +1,29 @@
+sdxl_multiprompts Regular Inference Baseline
+============================================
+
+Args
+----
+{
+  "geneval_csv": "/media/rogerio-lab/rogerio_ssd1/projects/feature_fk_search/results/reward_signal/sdxl_reward_signal_multiprompts/sdxl_reward_signal_multiprompts_geneval_sample_scores.csv",
+  "guidance_metric": "ir",
+  "logical_seeds": [
+    0,
+    1,
+    2
+  ],
+  "model_label": "sdxl_multiprompts",
+  "n": 4,
+  "num_seeds": 3,
+  "output_dir": "/media/rogerio-lab/rogerio_ssd1/projects/feature_fk_search/results/multiprompt/sdxl",
+  "rewards_root": "/media/rogerio-lab/rogerio_ssd1/projects/feature_fk_search/results/reward_signal/sdxl_reward_signal_multiprompts"
+}
+
+Per-seed results
+----------------
+seed=0  particles=0          prompts=553  IR=0.558309 HPS=nan GenEvalOverall=0.521883 GenEvalOverall@IR=0.521883 GenEvalOverall@HPS=0.521883
+seed=1  particles=1          prompts=553  IR=0.647744 HPS=nan GenEvalOverall=0.522594 GenEvalOverall@IR=0.522594 GenEvalOverall@HPS=0.522594
+seed=2  particles=2          prompts=553  IR=0.208291 HPS=nan GenEvalOverall=0.458993 GenEvalOverall@IR=0.458993 GenEvalOverall@HPS=0.458993
+
+Mean across seeds
+-----------------
+IR=0.471448 HPS=nan GenEvalOverall=0.501157 GenEvalOverall@IR=0.501157 GenEvalOverall@HPS=0.501157

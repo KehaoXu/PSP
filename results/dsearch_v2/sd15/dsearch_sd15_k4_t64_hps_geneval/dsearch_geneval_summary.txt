@@ -1,0 +1,9 @@
+DSearch root: /media/rogerio-lab/rogerio_ssd1/projects/feature_fk_search/results/dsearch_v2/sd15/dsearch_sd15_k4_t64_hps_geneval
+Guidance metric: HPS
+
+Per-seed results:
+- seed=42: HPS_mean=0.294250, GenEval=0.496477, prompts=553, shards=8
+- seed=43: HPS_mean=0.292640, GenEval=0.513757, prompts=553, shards=8
+- seed=44: HPS_mean=0.292208, GenEval=0.503435, prompts=553, shards=8
+
+Mean across seeds: HPS_mean=0.293033 (std=0.000879), GenEval=0.504556 (std=0.007099)

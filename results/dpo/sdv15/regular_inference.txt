@@ -1,0 +1,29 @@
+sdv15_dpo Regular Inference Baseline
+====================================
+
+Args
+----
+{
+  "geneval_csv": "/media/rogerio-lab/rogerio_ssd1/projects/feature_fk_search/results/reward_signal/sd15_dpo_reward_signal/sdv15_dpo_geneval_sample_scores.csv",
+  "guidance_metric": "ir",
+  "logical_seeds": [
+    0,
+    1,
+    2
+  ],
+  "model_label": "sdv15_dpo",
+  "n": 4,
+  "num_seeds": 3,
+  "output_dir": "/media/rogerio-lab/rogerio_ssd1/projects/feature_fk_search/results/dpo/sdv15",
+  "rewards_root": "/media/rogerio-lab/rogerio_ssd1/projects/feature_fk_search/results/reward_signal/sd15_dpo_reward_signal"
+}
+
+Per-seed results
+----------------
+seed=0  particles=0          prompts=553  IR=0.036683 HPS=nan GenEvalOverall=0.471580 GenEvalOverall@IR=0.471580 GenEvalOverall@HPS=0.471580
+seed=1  particles=1          prompts=553  IR=-0.033722 HPS=nan GenEvalOverall=0.457075 GenEvalOverall@IR=0.457075 GenEvalOverall@HPS=0.457075
+seed=2  particles=2          prompts=553  IR=-0.068297 HPS=nan GenEvalOverall=0.433291 GenEvalOverall@IR=0.433291 GenEvalOverall@HPS=0.433291
+
+Mean across seeds
+-----------------
+IR=-0.021778 HPS=nan GenEvalOverall=0.453982 GenEvalOverall@IR=0.453982 GenEvalOverall@HPS=0.453982

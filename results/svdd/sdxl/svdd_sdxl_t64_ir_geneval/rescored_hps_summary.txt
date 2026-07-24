@@ -1,0 +1,10 @@
+Re-scored HPS (HPSv2 v2.1) for: /home/rogerio-lab/PycharmProjects/feature_fk_search/results_local/svdd/sdxl/svdd_sdxl_t64_ir_geneval
+Method: svdd   Backbone: sdxl
+Winner image: <prompt_id>/best_of_n_samples/<first .png>
+
+Per-seed results:
+- seed=42: HPS_mean=0.286140, prompts=553
+- seed=43: HPS_mean=0.287839, prompts=553
+- seed=44: HPS_mean=0.287749, prompts=553
+
+Mean across seeds: HPS_mean=0.287243 (std=0.000780)

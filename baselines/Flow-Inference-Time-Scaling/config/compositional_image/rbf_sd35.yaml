@@ -1,0 +1,48 @@
+batch_size: 2
+init_n_particles: 4
+
+convert_scheduler: vp
+sample_method: sde
+text_prompt:
+
+max_nfe: 128
+max_steps: 32
+block_size: 1
+n_particles: 1
+scheduler_n: 1.0
+
+root_dir: ./results
+tag: ${filtering_method}
+save_now: True
+
+device: 0
+seed: 0
+
+filtering_method: rbf
+
+disable_debug: False
+
+height: 1024
+width: 1024
+
+time_sampler: flux_scheduler
+time_schedule: exp
+t_max: 1000
+
+model: flux_image
+channels: 16
+data_dim: 128
+
+prior: sd35
+guidance_scale: 7.0
+diffusion_coefficient: square
+diffusion_norm: 3.0
+model_name: "stabilityai/stable-diffusion-3.5-large"
+image_seq_len: 4096
+
+logger: self
+log_interval: 1
+
+corrector: particle
+reward_weight: 0.5
+reward_score: imagereward

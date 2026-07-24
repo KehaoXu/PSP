@@ -1,0 +1,28 @@
+sdxl Best-of-4 Baseline
+=======================
+
+Args
+----
+{
+  "geneval_csv": "/media/rogerio-lab/rogerio_ssd1/projects/feature_fk_search/results/reward_signal/sdxl_reward_signal/sdxl_geneval_sample_scores.csv",
+  "logical_seeds": [
+    0,
+    1,
+    2
+  ],
+  "model_label": "sdxl",
+  "n": 4,
+  "num_seeds": 3,
+  "output_dir": "/media/rogerio-lab/rogerio_ssd1/projects/feature_fk_search/results/baselines/sdxl",
+  "rewards_root": "/media/rogerio-lab/rogerio_ssd1/projects/feature_fk_search/results/reward_signal/sdxl_reward_signal"
+}
+
+Per-seed results
+----------------
+seed=0  particles=0..3       prompts=553  IR=1.090950 HPS=0.297597 GenEvalOverall=0.741162 GenEvalOverall@IR=0.608663 GenEvalOverall@HPS=0.606139
+seed=1  particles=4..7       prompts=553  IR=1.096016 HPS=0.297560 GenEvalOverall=0.763760 GenEvalOverall@IR=0.642170 GenEvalOverall@HPS=0.633510
+seed=2  particles=8..11      prompts=553  IR=1.106506 HPS=0.298430 GenEvalOverall=0.748041 GenEvalOverall@IR=0.636255 GenEvalOverall@HPS=0.611230
+
+Mean across seeds
+-----------------
+IR=1.097824 HPS=0.297862 GenEvalOverall=0.750988 GenEvalOverall@IR=0.629030 GenEvalOverall@HPS=0.616959

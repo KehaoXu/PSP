@@ -1,0 +1,37 @@
+sdv15 MT Scheduled Baseline
+===========================
+
+Args
+----
+{
+  "cutoff_times": [
+    16,
+    32
+  ],
+  "geneval_csv": "/media/rogerio-lab/rogerio_ssd1/projects/feature_fk_search/results/reward_signal/sd15_reward_signal/sd15_geneval_sample_scores.csv",
+  "k_init": 8,
+  "logical_seeds": [
+    0,
+    1,
+    2
+  ],
+  "model_label": "sdv15",
+  "num_seeds": 3,
+  "output_dir": "/media/rogerio-lab/rogerio_ssd1/projects/feature_fk_search/results/baselines/sdv15",
+  "remaining_particles": [
+    4,
+    2
+  ],
+  "rewards_root": "/media/rogerio-lab/rogerio_ssd1/projects/feature_fk_search/results/reward_signal/sd15_reward_signal",
+  "total_steps": 64
+}
+
+Per-seed results
+----------------
+seed=0  particles=0..7       prompts=553  IR=0.795756 HPS=0.287857 GenEvalOverall@IR=0.574124 GenEvalOverall@HPS=0.545894
+seed=1  particles=8..15      prompts=553  IR=0.827138 HPS=0.287193 GenEvalOverall@IR=0.567211 GenEvalOverall@HPS=0.542127
+seed=2  particles=16..23     prompts=553  IR=0.856926 HPS=0.287900 GenEvalOverall@IR=0.579765 GenEvalOverall@HPS=0.534435
+
+Mean across seeds
+-----------------
+IR=0.826607 HPS=0.287650 GenEvalOverall@IR=0.573700 GenEvalOverall@HPS=0.540819

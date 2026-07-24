@@ -1,0 +1,28 @@
+sd35 Best-of-4 Baseline
+=======================
+
+Args
+----
+{
+  "geneval_csv": "/media/rogerio-lab/rogerio_ssd1/projects/feature_fk_search/results/reward_signal/sd35_reward_signal/sd35_geneval_sample_scores.csv",
+  "logical_seeds": [
+    0,
+    1,
+    2
+  ],
+  "model_label": "sd35",
+  "n": 4,
+  "num_seeds": 3,
+  "output_dir": "/media/rogerio-lab/rogerio_ssd1/projects/feature_fk_search/results/baselines/sd35",
+  "rewards_root": "/media/rogerio-lab/rogerio_ssd1/projects/feature_fk_search/results/reward_signal/sd35_reward_signal"
+}
+
+Per-seed results
+----------------
+seed=0  particles=0..3       prompts=553  IR=1.321384 HPS=0.312500 GenEvalOverall=0.856411 GenEvalOverall@IR=0.754187 GenEvalOverall@HPS=0.750076
+seed=1  particles=4..7       prompts=553  IR=1.346872 HPS=0.311967 GenEvalOverall=0.853078 GenEvalOverall@IR=0.737193 GenEvalOverall@HPS=0.738550
+seed=2  particles=8..11      prompts=553  IR=1.340183 HPS=0.312624 GenEvalOverall=0.876543 GenEvalOverall@IR=0.748957 GenEvalOverall@HPS=0.755943
+
+Mean across seeds
+-----------------
+IR=1.336146 HPS=0.312364 GenEvalOverall=0.862011 GenEvalOverall@IR=0.746779 GenEvalOverall@HPS=0.748190

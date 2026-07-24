@@ -1,0 +1,10 @@
+Re-scored IR (ImageReward) for: /home/rogerio-lab/PycharmProjects/feature_fk_search/results_local/fits_rbf_v1/sd15/fitsrbf_sd15_t64_ir_geneval
+Model: ImageReward-v1.0   device: cuda
+Winner image: <prompt_id>/best_of_n_samples/<first .png>
+
+Per-seed results:
+- seed=42: IR_mean=0.691474, prompts=553
+- seed=43: IR_mean=0.664351, prompts=553
+- seed=44: IR_mean=0.653186, prompts=553
+
+Mean across seeds: IR_mean=0.669670 (std=0.016077)

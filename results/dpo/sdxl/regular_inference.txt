@@ -1,0 +1,29 @@
+sdxl_dpo Regular Inference Baseline
+===================================
+
+Args
+----
+{
+  "geneval_csv": "/media/rogerio-lab/rogerio_ssd1/projects/feature_fk_search/results/reward_signal/sdxl_dpo_reward_signal/sdxl_dpo_geneval_sample_scores.csv",
+  "guidance_metric": "ir",
+  "logical_seeds": [
+    0,
+    1,
+    2
+  ],
+  "model_label": "sdxl_dpo",
+  "n": 4,
+  "num_seeds": 3,
+  "output_dir": "/media/rogerio-lab/rogerio_ssd1/projects/feature_fk_search/results/dpo/sdxl",
+  "rewards_root": "/media/rogerio-lab/rogerio_ssd1/projects/feature_fk_search/results/reward_signal/sdxl_dpo_reward_signal"
+}
+
+Per-seed results
+----------------
+seed=0  particles=0          prompts=553  IR=0.899975 HPS=nan GenEvalOverall=0.578068 GenEvalOverall@IR=0.578068 GenEvalOverall@HPS=0.578068
+seed=1  particles=1          prompts=553  IR=0.911314 HPS=nan GenEvalOverall=0.567800 GenEvalOverall@IR=0.567800 GenEvalOverall@HPS=0.567800
+seed=2  particles=2          prompts=553  IR=0.871690 HPS=nan GenEvalOverall=0.596044 GenEvalOverall@IR=0.596044 GenEvalOverall@HPS=0.596044
+
+Mean across seeds
+-----------------
+IR=0.894326 HPS=nan GenEvalOverall=0.580637 GenEvalOverall@IR=0.580637 GenEvalOverall@HPS=0.580637

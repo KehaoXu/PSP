@@ -1,0 +1,28 @@
+sdv15 Best-of-4 Baseline
+========================
+
+Args
+----
+{
+  "geneval_csv": "/media/rogerio-lab/rogerio_ssd1/projects/feature_fk_search/results/reward_signal/sd15_reward_signal/sd15_geneval_sample_scores.csv",
+  "logical_seeds": [
+    0,
+    1,
+    2
+  ],
+  "model_label": "sdv15",
+  "n": 4,
+  "num_seeds": 3,
+  "output_dir": "/media/rogerio-lab/rogerio_ssd1/projects/feature_fk_search/results/baselines/sdv15",
+  "rewards_root": "/media/rogerio-lab/rogerio_ssd1/projects/feature_fk_search/results/reward_signal/sd15_reward_signal"
+}
+
+Per-seed results
+----------------
+seed=0  particles=0..3       prompts=553  IR=0.645306 HPS=0.281521 GenEvalOverall=0.614780 GenEvalOverall@IR=0.539627 GenEvalOverall@HPS=0.516562
+seed=1  particles=4..7       prompts=553  IR=0.655691 HPS=0.282507 GenEvalOverall=0.617844 GenEvalOverall@IR=0.543372 GenEvalOverall@HPS=0.536948
+seed=2  particles=8..11      prompts=553  IR=0.662704 HPS=0.280513 GenEvalOverall=0.601038 GenEvalOverall@IR=0.544431 GenEvalOverall@HPS=0.521464
+
+Mean across seeds
+-----------------
+IR=0.654567 HPS=0.281514 GenEvalOverall=0.611220 GenEvalOverall@IR=0.542477 GenEvalOverall@HPS=0.524991

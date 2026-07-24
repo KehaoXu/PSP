@@ -1,0 +1,9 @@
+FK root: /media/rogerio-lab/rogerio_ssd1/projects/feature_fk_search/results/fk_steering/sd35/fk_sdv35_k4_t32_gamma_0p005_hps_geneval
+Guidance metric: HPS
+
+Per-seed results:
+- seed=42: HPS_mean=0.301494, GenEval=0.734587, prompts=553
+- seed=43: HPS_mean=0.302428, GenEval=0.733750, prompts=553
+- seed=44: HPS_mean=0.301379, GenEval=0.719944, prompts=553
+
+Mean across seeds: HPS_mean=0.301767 (std=0.000470), GenEval=0.729427 (std=0.006714)

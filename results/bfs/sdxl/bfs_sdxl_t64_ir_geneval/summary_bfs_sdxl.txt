@@ -1,0 +1,9 @@
+DSearch root: /home/rogerio-lab/PycharmProjects/feature_fk_search/results_local/bfs/sdxl/bfs_sdxl_t64_ir_geneval
+Guidance metric: IR
+
+Per-seed results:
+- seed=42: IR_mean=1.233122, GenEval=0.624052, prompts=553, shards=4
+- seed=43: IR_mean=1.264635, GenEval=0.629282, prompts=553, shards=4
+- seed=44: IR_mean=1.243964, GenEval=0.653301, prompts=553, shards=4
+
+Mean across seeds: IR_mean=1.247240 (std=0.013072), GenEval=0.635545 (std=0.012735)

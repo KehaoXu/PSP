@@ -1,0 +1,29 @@
+sdxl_multiprompts Best-of-4 Baseline
+====================================
+
+Args
+----
+{
+  "geneval_csv": "/media/rogerio-lab/rogerio_ssd1/projects/feature_fk_search/results/reward_signal/sdxl_reward_signal_multiprompts/sdxl_reward_signal_multiprompts_geneval_sample_scores.csv",
+  "guidance_metric": "ir",
+  "logical_seeds": [
+    0,
+    1,
+    2
+  ],
+  "model_label": "sdxl_multiprompts",
+  "n": 4,
+  "num_seeds": 3,
+  "output_dir": "/media/rogerio-lab/rogerio_ssd1/projects/feature_fk_search/results/multiprompt/sdxl",
+  "rewards_root": "/media/rogerio-lab/rogerio_ssd1/projects/feature_fk_search/results/reward_signal/sdxl_reward_signal_multiprompts"
+}
+
+Per-seed results
+----------------
+seed=0  particles=0..3       prompts=553  IR=1.265075 HPS=nan GenEvalOverall=0.709070 GenEvalOverall@IR=0.600708 GenEvalOverall@HPS=nan
+seed=1  particles=4..7       prompts=553  IR=1.274427 HPS=nan GenEvalOverall=0.708785 GenEvalOverall@IR=0.585945 GenEvalOverall@HPS=nan
+seed=2  particles=8..11      prompts=553  IR=1.228456 HPS=nan GenEvalOverall=0.704487 GenEvalOverall@IR=0.606613 GenEvalOverall@HPS=nan
+
+Mean across seeds
+-----------------
+IR=1.255986 HPS=nan GenEvalOverall=0.707447 GenEvalOverall@IR=0.597755 GenEvalOverall@HPS=nan

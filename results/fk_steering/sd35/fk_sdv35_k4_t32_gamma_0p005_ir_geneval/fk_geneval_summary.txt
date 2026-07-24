@@ -1,0 +1,9 @@
+FK root: /media/rogerio-lab/rogerio_ssd1/projects/feature_fk_search/results/fk_steering/sd35/fk_sdv35_k4_t32_gamma_0p005_ir_geneval
+Guidance metric: IR
+
+Per-seed results:
+- seed=42: IR_mean=1.287362, GenEval=0.734260, prompts=553
+- seed=43: IR_mean=1.303078, GenEval=0.731938, prompts=553
+- seed=44: IR_mean=1.290714, GenEval=0.760590, prompts=553
+
+Mean across seeds: IR_mean=1.293718 (std=0.006759), GenEval=0.742263 (std=0.012994)

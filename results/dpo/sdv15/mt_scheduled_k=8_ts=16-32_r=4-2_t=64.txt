@@ -1,0 +1,38 @@
+sdv15_dpo MT Scheduled Baseline
+===============================
+
+Args
+----
+{
+  "cutoff_times": [
+    16,
+    32
+  ],
+  "geneval_csv": "/media/rogerio-lab/rogerio_ssd1/projects/feature_fk_search/results/reward_signal/sd15_dpo_reward_signal/sdv15_dpo_geneval_sample_scores.csv",
+  "guidance_metric": "ir",
+  "k_init": 8,
+  "logical_seeds": [
+    0,
+    1,
+    2
+  ],
+  "model_label": "sdv15_dpo",
+  "num_seeds": 3,
+  "output_dir": "/media/rogerio-lab/rogerio_ssd1/projects/feature_fk_search/results/dpo/sdv15",
+  "remaining_particles": [
+    4,
+    2
+  ],
+  "rewards_root": "/media/rogerio-lab/rogerio_ssd1/projects/feature_fk_search/results/reward_signal/sd15_dpo_reward_signal",
+  "total_steps": 64
+}
+
+Per-seed results
+----------------
+seed=0  particles=0..7       prompts=553  IR=0.909483 HPS=nan GenEvalOverall@IR=0.598375 GenEvalOverall@HPS=nan
+seed=1  particles=8..15      prompts=553  IR=0.897953 HPS=nan GenEvalOverall@IR=0.584863 GenEvalOverall@HPS=nan
+seed=2  particles=16..23     prompts=553  IR=0.914328 HPS=nan GenEvalOverall@IR=0.595302 GenEvalOverall@HPS=nan
+
+Mean across seeds
+-----------------
+IR=0.907255 HPS=nan GenEvalOverall@IR=0.592847 GenEvalOverall@HPS=nan

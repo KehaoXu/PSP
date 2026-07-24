@@ -1,0 +1,940 @@
+{
+  "config": {
+    "model_name": "stable-diffusion-v1-5",
+    "device": "cuda",
+    "time_steps": 64,
+    "prompts_path": "/root/feature_fk_search/Fk-Diffusion-Steering/text_to_image/prompt_files/benchmark_ir.json",
+    "prompt_start_id": 0,
+    "num_prompts_total": 11,
+    "num_prompts_stats": 10,
+    "dropped_warmup_prompt_ids": [
+      0
+    ],
+    "prompt_ids_used_for_stats": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "pps_steps": [
+      16,
+      32,
+      64
+    ],
+    "bon_steps": [
+      64
+    ]
+  },
+  "method_level_summary": {
+    "bon": {
+      "total_wall_s": {
+        "mean": 2.7301436269655825,
+        "std": 0.02474207006652479
+      },
+      "diffusion_s": {
+        "mean": 2.5454575553536416,
+        "std": 0.0033303841765702467
+      },
+      "eval_total_s": {
+        "mean": 0.18468607161194087,
+        "std": 0.02536461028662255
+      },
+      "decode_vae_s": {
+        "mean": 0.06182105801999569,
+        "std": 4.3587887768075715e-05
+      },
+      "reward_eval_s": {
+        "mean": 0.10590218435972928,
+        "std": 0.025767074732865772
+      },
+      "eval_other_s": {
+        "mean": 0.01696282923221588,
+        "std": 0.0018803703335582025
+      }
+    },
+    "pps": {
+      "total_wall_s": {
+        "mean": 3.0789551528170707,
+        "std": 0.007579126007344
+      },
+      "diffusion_s": {
+        "mean": 2.560617821663618,
+        "std": 0.003922633129888339
+      },
+      "eval_total_s": {
+        "mean": 0.5183373311534524,
+        "std": 0.008742248202008404
+      },
+      "decode_vae_s": {
+        "mean": 0.21059176716953515,
+        "std": 0.00012746311152198405
+      },
+      "reward_eval_s": {
+        "mean": 0.25082396864891054,
+        "std": 0.006720738881947533
+      },
+      "eval_other_s": {
+        "mean": 0.056921595335006715,
+        "std": 0.003912218139479745
+      }
+    }
+  },
+  "per_eval_instance_summary": {
+    "bon": {
+      "end": {
+        "eval_total_s": {
+          "mean": 0.18468607161194087,
+          "std": 0.02536461028662255
+        },
+        "decode_vae_s": {
+          "mean": 0.06182105801999569,
+          "std": 4.3587887768075715e-05
+        },
+        "reward_eval_s": {
+          "mean": 0.10590218435972928,
+          "std": 0.025767074732865772
+        },
+        "eval_other_s": {
+          "mean": 0.01696282923221588,
+          "std": 0.0018803703335582025
+        }
+      }
+    },
+    "pps": {
+      "25pct": {
+        "eval_total_s": {
+          "mean": 0.2730543456971645,
+          "std": 0.006305554004953712
+        },
+        "decode_vae_s": {
+          "mean": 0.11163592599332332,
+          "std": 6.910715228392392e-05
+        },
+        "reward_eval_s": {
+          "mean": 0.130767254345119,
+          "std": 0.0068610176527086975
+        },
+        "eval_other_s": {
+          "mean": 0.03065116535872221,
+          "std": 0.002883992854647179
+        }
+      },
+      "50pct": {
+        "eval_total_s": {
+          "mean": 0.14874302167445422,
+          "std": 0.012930379094320732
+        },
+        "decode_vae_s": {
+          "mean": 0.06183130443096161,
+          "std": 8.94625616362911e-05
+        },
+        "reward_eval_s": {
+          "mean": 0.07067497298121453,
+          "std": 0.012947919771665007
+        },
+        "eval_other_s": {
+          "mean": 0.01623674426227808,
+          "std": 0.0009739279424467477
+        }
+      },
+      "end": {
+        "eval_total_s": {
+          "mean": 0.09653996378183365,
+          "std": 0.007671890121603411
+        },
+        "decode_vae_s": {
+          "mean": 0.03712453674525022,
+          "std": 3.843743237617604e-05
+        },
+        "reward_eval_s": {
+          "mean": 0.049381741322577,
+          "std": 0.007622568390913816
+        },
+        "eval_other_s": {
+          "mean": 0.010033685714006424,
+          "std": 0.0015992432620792797
+        }
+      }
+    }
+  },
+  "per_prompt_rows": [
+    {
+      "prompt_id": 0,
+      "method": "bon",
+      "total_wall_s": 10.140306990593672,
+      "diffusion_s": 2.959265772253275,
+      "eval_total_s": 7.181041218340397,
+      "decode_vae_s": 0.0750628188252449,
+      "reward_eval_s": 7.079419121146202,
+      "eval_other_s": 0.02655927836894989,
+      "eval_calls": 1.0
+    },
+    {
+      "prompt_id": 0,
+      "method": "pps",
+      "total_wall_s": 3.301124382764101,
+      "diffusion_s": 2.6513016130775213,
+      "eval_total_s": 0.6498227696865797,
+      "decode_vae_s": 0.2253343779593706,
+      "reward_eval_s": 0.36543238162994385,
+      "eval_other_s": 0.059056010097265244,
+      "eval_calls": 3.0
+    },
+    {
+      "prompt_id": 1,
+      "method": "bon",
+      "total_wall_s": 2.7212961204349995,
+      "diffusion_s": 2.539148561656475,
+      "eval_total_s": 0.1821475587785244,
+      "decode_vae_s": 0.06176248751580715,
+      "reward_eval_s": 0.10442925430834293,
+      "eval_other_s": 0.015955816954374313,
+      "eval_calls": 1.0
+    },
+    {
+      "prompt_id": 1,
+      "method": "pps",
+      "total_wall_s": 3.074087005108595,
+      "diffusion_s": 2.56077997200191,
+      "eval_total_s": 0.5133070331066847,
+      "decode_vae_s": 0.21049651876091957,
+      "reward_eval_s": 0.24843299575150013,
+      "eval_other_s": 0.054377518594264984,
+      "eval_calls": 3.0
+    },
+    {
+      "prompt_id": 2,
+      "method": "bon",
+      "total_wall_s": 2.72462822124362,
+      "diffusion_s": 2.548365956172347,
+      "eval_total_s": 0.17626226507127285,
+      "decode_vae_s": 0.06177685782313347,
+      "reward_eval_s": 0.09855455346405506,
+      "eval_other_s": 0.01593085378408432,
+      "eval_calls": 1.0
+    },
+    {
+      "prompt_id": 2,
+      "method": "pps",
+      "total_wall_s": 3.076101081445813,
+      "diffusion_s": 2.554726582020521,
+      "eval_total_s": 0.521374499425292,
+      "decode_vae_s": 0.21052189730107784,
+      "reward_eval_s": 0.25372796319425106,
+      "eval_other_s": 0.05712463892996311,
+      "eval_calls": 3.0
+    },
+    {
+      "prompt_id": 3,
+      "method": "bon",
+      "total_wall_s": 2.723096778616309,
+      "diffusion_s": 2.541533313691616,
+      "eval_total_s": 0.1815634649246931,
+      "decode_vae_s": 0.061801595613360405,
+      "reward_eval_s": 0.10389360412955284,
+      "eval_other_s": 0.01586826518177986,
+      "eval_calls": 1.0
+    },
+    {
+      "prompt_id": 3,
+      "method": "pps",
+      "total_wall_s": 3.077507246285677,
+      "diffusion_s": 2.5575680304318666,
+      "eval_total_s": 0.5199392158538103,
+      "decode_vae_s": 0.210488423705101,
+      "reward_eval_s": 0.2525355499237776,
+      "eval_other_s": 0.05691524222493172,
+      "eval_calls": 3.0
+    },
+    {
+      "prompt_id": 4,
+      "method": "bon",
+      "total_wall_s": 2.721271650865674,
+      "diffusion_s": 2.547234946861863,
+      "eval_total_s": 0.17403670400381088,
+      "decode_vae_s": 0.061828307807445526,
+      "reward_eval_s": 0.09647089429199696,
+      "eval_other_s": 0.0157375019043684,
+      "eval_calls": 1.0
+    },
+    {
+      "prompt_id": 4,
+      "method": "pps",
+      "total_wall_s": 3.0781162679195404,
+      "diffusion_s": 2.558629171922803,
+      "eval_total_s": 0.5194870959967375,
+      "decode_vae_s": 0.210613165050745,
+      "reward_eval_s": 0.25486215576529503,
+      "eval_other_s": 0.05401177518069744,
+      "eval_calls": 3.0
+    },
+    {
+      "prompt_id": 5,
+      "method": "bon",
+      "total_wall_s": 2.7212359365075827,
+      "diffusion_s": 2.543335998430848,
+      "eval_total_s": 0.17789993807673454,
+      "decode_vae_s": 0.061833176761865616,
+      "reward_eval_s": 0.10020541958510876,
+      "eval_other_s": 0.01586134172976017,
+      "eval_calls": 1.0
+    },
+    {
+      "prompt_id": 5,
+      "method": "pps",
+      "total_wall_s": 3.0766747426241636,
+      "diffusion_s": 2.556558173149824,
+      "eval_total_s": 0.5201165694743395,
+      "decode_vae_s": 0.21044044010341167,
+      "reward_eval_s": 0.25423939526081085,
+      "eval_other_s": 0.05543673411011696,
+      "eval_calls": 3.0
+    },
+    {
+      "prompt_id": 6,
+      "method": "bon",
+      "total_wall_s": 2.721942974254489,
+      "diffusion_s": 2.547804322093725,
+      "eval_total_s": 0.17413865216076374,
+      "decode_vae_s": 0.0617973655462265,
+      "reward_eval_s": 0.09076659381389618,
+      "eval_other_s": 0.02157469280064106,
+      "eval_calls": 1.0
+    },
+    {
+      "prompt_id": 6,
+      "method": "pps",
+      "total_wall_s": 3.07842480763793,
+      "diffusion_s": 2.5626677852123976,
+      "eval_total_s": 0.5157570224255323,
+      "decode_vae_s": 0.21056984923779964,
+      "reward_eval_s": 0.2498954739421606,
+      "eval_other_s": 0.05529169924557209,
+      "eval_calls": 3.0
+    },
+    {
+      "prompt_id": 7,
+      "method": "bon",
+      "total_wall_s": 2.800473650917411,
+      "diffusion_s": 2.5442102253437042,
+      "eval_total_s": 0.2562634255737066,
+      "decode_vae_s": 0.06184116750955582,
+      "reward_eval_s": 0.1781348902732134,
+      "eval_other_s": 0.016287367790937424,
+      "eval_calls": 1.0
+    },
+    {
+      "prompt_id": 7,
+      "method": "pps",
+      "total_wall_s": 3.1001125685870647,
+      "diffusion_s": 2.5605533830821514,
+      "eval_total_s": 0.5395591855049133,
+      "decode_vae_s": 0.21053269691765308,
+      "reward_eval_s": 0.2621466461569071,
+      "eval_other_s": 0.06687984243035316,
+      "eval_calls": 3.0
+    },
+    {
+      "prompt_id": 8,
+      "method": "bon",
+      "total_wall_s": 2.722748927772045,
+      "diffusion_s": 2.548932733014226,
+      "eval_total_s": 0.17381619475781918,
+      "decode_vae_s": 0.06181781366467476,
+      "reward_eval_s": 0.09306477382779121,
+      "eval_other_s": 0.018933607265353203,
+      "eval_calls": 1.0
+    },
+    {
+      "prompt_id": 8,
+      "method": "pps",
+      "total_wall_s": 3.0744724813848734,
+      "diffusion_s": 2.5677434857934713,
+      "eval_total_s": 0.506728995591402,
+      "decode_vae_s": 0.21083592996001244,
+      "reward_eval_s": 0.23618621937930584,
+      "eval_other_s": 0.05970684625208378,
+      "eval_calls": 3.0
+    },
+    {
+      "prompt_id": 9,
+      "method": "bon",
+      "total_wall_s": 2.723792862147093,
+      "diffusion_s": 2.545492544770241,
+      "eval_total_s": 0.17830031737685204,
+      "decode_vae_s": 0.06183038279414177,
+      "reward_eval_s": 0.09948455169796944,
+      "eval_other_s": 0.01698538288474083,
+      "eval_calls": 1.0
+    },
+    {
+      "prompt_id": 9,
+      "method": "pps",
+      "total_wall_s": 3.076105421409011,
+      "diffusion_s": 2.564636828377843,
+      "eval_total_s": 0.511468593031168,
+      "decode_vae_s": 0.2107684575021267,
+      "reward_eval_s": 0.24680916592478752,
+      "eval_other_s": 0.05389096960425377,
+      "eval_calls": 3.0
+    },
+    {
+      "prompt_id": 10,
+      "method": "bon",
+      "total_wall_s": 2.7209491468966007,
+      "diffusion_s": 2.5485169515013695,
+      "eval_total_s": 0.17243219539523125,
+      "decode_vae_s": 0.06192142516374588,
+      "reward_eval_s": 0.09401730820536613,
+      "eval_other_s": 0.016493462026119232,
+      "eval_calls": 1.0
+    },
+    {
+      "prompt_id": 10,
+      "method": "pps",
+      "total_wall_s": 3.077949905768037,
+      "diffusion_s": 2.5623148046433926,
+      "eval_total_s": 0.5156351011246443,
+      "decode_vae_s": 0.21065029315650463,
+      "reward_eval_s": 0.24940412119030952,
+      "eval_other_s": 0.055580686777830124,
+      "eval_calls": 3.0
+    }
+  ],
+  "per_eval_rows": [
+    {
+      "prompt_id": 0,
+      "method": "bon",
+      "eval_step": 64,
+      "eval_label": "end",
+      "batch_before": 4,
+      "batch_after": 4,
+      "eval_total_s": 7.181041218340397,
+      "decode_vae_s": 0.0750628188252449,
+      "reward_eval_s": 7.079419121146202,
+      "eval_other_s": 0.02655927836894989
+    },
+    {
+      "prompt_id": 0,
+      "method": "pps",
+      "eval_step": 16,
+      "eval_label": "25pct",
+      "batch_before": 8,
+      "batch_after": 4,
+      "eval_total_s": 0.33526841923594475,
+      "decode_vae_s": 0.11671920865774155,
+      "reward_eval_s": 0.18488159775733948,
+      "eval_other_s": 0.033667612820863724
+    },
+    {
+      "prompt_id": 0,
+      "method": "pps",
+      "eval_step": 32,
+      "eval_label": "50pct",
+      "batch_before": 4,
+      "batch_after": 2,
+      "eval_total_s": 0.16044182516634464,
+      "decode_vae_s": 0.06173436716198921,
+      "reward_eval_s": 0.08253675885498524,
+      "eval_other_s": 0.016170699149370193
+    },
+    {
+      "prompt_id": 0,
+      "method": "pps",
+      "eval_step": 64,
+      "eval_label": "end",
+      "batch_before": 2,
+      "batch_after": 2,
+      "eval_total_s": 0.1541125252842903,
+      "decode_vae_s": 0.046880802139639854,
+      "reward_eval_s": 0.09801402501761913,
+      "eval_other_s": 0.009217698127031326
+    },
+    {
+      "prompt_id": 1,
+      "method": "bon",
+      "eval_step": 64,
+      "eval_label": "end",
+      "batch_before": 4,
+      "batch_after": 4,
+      "eval_total_s": 0.1821475587785244,
+      "decode_vae_s": 0.06176248751580715,
+      "reward_eval_s": 0.10442925430834293,
+      "eval_other_s": 0.015955816954374313
+    },
+    {
+      "prompt_id": 1,
+      "method": "pps",
+      "eval_step": 16,
+      "eval_label": "25pct",
+      "batch_before": 8,
+      "batch_after": 4,
+      "eval_total_s": 0.27718560211360455,
+      "decode_vae_s": 0.11156859807670116,
+      "reward_eval_s": 0.1367347426712513,
+      "eval_other_s": 0.028882261365652084
+    },
+    {
+      "prompt_id": 1,
+      "method": "pps",
+      "eval_step": 32,
+      "eval_label": "50pct",
+      "batch_before": 4,
+      "batch_after": 2,
+      "eval_total_s": 0.14799264818429947,
+      "decode_vae_s": 0.06177712790668011,
+      "reward_eval_s": 0.07031388767063618,
+      "eval_other_s": 0.015901632606983185
+    },
+    {
+      "prompt_id": 1,
+      "method": "pps",
+      "eval_step": 64,
+      "eval_label": "end",
+      "batch_before": 2,
+      "batch_after": 2,
+      "eval_total_s": 0.08812878280878067,
+      "decode_vae_s": 0.0371507927775383,
+      "reward_eval_s": 0.041384365409612656,
+      "eval_other_s": 0.009593624621629715
+    },
+    {
+      "prompt_id": 2,
+      "method": "bon",
+      "eval_step": 64,
+      "eval_label": "end",
+      "batch_before": 4,
+      "batch_after": 4,
+      "eval_total_s": 0.17626226507127285,
+      "decode_vae_s": 0.06177685782313347,
+      "reward_eval_s": 0.09855455346405506,
+      "eval_other_s": 0.01593085378408432
+    },
+    {
+      "prompt_id": 2,
+      "method": "pps",
+      "eval_step": 16,
+      "eval_label": "25pct",
+      "batch_before": 8,
+      "batch_after": 4,
+      "eval_total_s": 0.27626211382448673,
+      "decode_vae_s": 0.11157713830471039,
+      "reward_eval_s": 0.1357743851840496,
+      "eval_other_s": 0.028910590335726738
+    },
+    {
+      "prompt_id": 2,
+      "method": "pps",
+      "eval_step": 32,
+      "eval_label": "50pct",
+      "batch_before": 4,
+      "batch_after": 2,
+      "eval_total_s": 0.15028357692062855,
+      "decode_vae_s": 0.06174914725124836,
+      "reward_eval_s": 0.06953964196145535,
+      "eval_other_s": 0.018994787707924843
+    },
+    {
+      "prompt_id": 2,
+      "method": "pps",
+      "eval_step": 64,
+      "eval_label": "end",
+      "batch_before": 2,
+      "batch_after": 2,
+      "eval_total_s": 0.09482880868017673,
+      "decode_vae_s": 0.037195611745119095,
+      "reward_eval_s": 0.04841393604874611,
+      "eval_other_s": 0.009219260886311531
+    },
+    {
+      "prompt_id": 3,
+      "method": "bon",
+      "eval_step": 64,
+      "eval_label": "end",
+      "batch_before": 4,
+      "batch_after": 4,
+      "eval_total_s": 0.1815634649246931,
+      "decode_vae_s": 0.061801595613360405,
+      "reward_eval_s": 0.10389360412955284,
+      "eval_other_s": 0.01586826518177986
+    },
+    {
+      "prompt_id": 3,
+      "method": "pps",
+      "eval_step": 16,
+      "eval_label": "25pct",
+      "batch_before": 8,
+      "batch_after": 4,
+      "eval_total_s": 0.274969257414341,
+      "decode_vae_s": 0.11167087778449059,
+      "reward_eval_s": 0.13143451884388924,
+      "eval_other_s": 0.03186386078596115
+    },
+    {
+      "prompt_id": 3,
+      "method": "pps",
+      "eval_step": 32,
+      "eval_label": "50pct",
+      "batch_before": 4,
+      "batch_after": 2,
+      "eval_total_s": 0.14201956056058407,
+      "decode_vae_s": 0.06175278685986996,
+      "reward_eval_s": 0.06437339261174202,
+      "eval_other_s": 0.01589338108897209
+    },
+    {
+      "prompt_id": 3,
+      "method": "pps",
+      "eval_step": 64,
+      "eval_label": "end",
+      "batch_before": 2,
+      "batch_after": 2,
+      "eval_total_s": 0.10295039787888527,
+      "decode_vae_s": 0.03706475906074047,
+      "reward_eval_s": 0.056727638468146324,
+      "eval_other_s": 0.009158000349998474
+    },
+    {
+      "prompt_id": 4,
+      "method": "bon",
+      "eval_step": 64,
+      "eval_label": "end",
+      "batch_before": 4,
+      "batch_after": 4,
+      "eval_total_s": 0.17403670400381088,
+      "decode_vae_s": 0.061828307807445526,
+      "reward_eval_s": 0.09647089429199696,
+      "eval_other_s": 0.0157375019043684
+    },
+    {
+      "prompt_id": 4,
+      "method": "pps",
+      "eval_step": 16,
+      "eval_label": "25pct",
+      "batch_before": 8,
+      "batch_after": 4,
+      "eval_total_s": 0.274971816688776,
+      "decode_vae_s": 0.11169794760644436,
+      "reward_eval_s": 0.13440575823187828,
+      "eval_other_s": 0.028868110850453377
+    },
+    {
+      "prompt_id": 4,
+      "method": "pps",
+      "eval_step": 32,
+      "eval_label": "50pct",
+      "batch_before": 4,
+      "batch_after": 2,
+      "eval_total_s": 0.14114910550415516,
+      "decode_vae_s": 0.06179468706250191,
+      "reward_eval_s": 0.06346400454640388,
+      "eval_other_s": 0.015890413895249367
+    },
+    {
+      "prompt_id": 4,
+      "method": "pps",
+      "eval_step": 64,
+      "eval_label": "end",
+      "batch_before": 2,
+      "batch_after": 2,
+      "eval_total_s": 0.1033661738038063,
+      "decode_vae_s": 0.037120530381798744,
+      "reward_eval_s": 0.05699239298701286,
+      "eval_other_s": 0.009253250434994698
+    },
+    {
+      "prompt_id": 5,
+      "method": "bon",
+      "eval_step": 64,
+      "eval_label": "end",
+      "batch_before": 4,
+      "batch_after": 4,
+      "eval_total_s": 0.17789993807673454,
+      "decode_vae_s": 0.061833176761865616,
+      "reward_eval_s": 0.10020541958510876,
+      "eval_other_s": 0.01586134172976017
+    },
+    {
+      "prompt_id": 5,
+      "method": "pps",
+      "eval_step": 16,
+      "eval_label": "25pct",
+      "batch_before": 8,
+      "batch_after": 4,
+      "eval_total_s": 0.2755930330604315,
+      "decode_vae_s": 0.11153552494943142,
+      "reward_eval_s": 0.13401398062705994,
+      "eval_other_s": 0.030043527483940125
+    },
+    {
+      "prompt_id": 5,
+      "method": "pps",
+      "eval_step": 32,
+      "eval_label": "50pct",
+      "batch_before": 4,
+      "batch_after": 2,
+      "eval_total_s": 0.1486565638333559,
+      "decode_vae_s": 0.06180976703763008,
+      "reward_eval_s": 0.07066166959702969,
+      "eval_other_s": 0.016185127198696136
+    },
+    {
+      "prompt_id": 5,
+      "method": "pps",
+      "eval_step": 64,
+      "eval_label": "end",
+      "batch_before": 2,
+      "batch_after": 2,
+      "eval_total_s": 0.0958669725805521,
+      "decode_vae_s": 0.037095148116350174,
+      "reward_eval_s": 0.04956374503672123,
+      "eval_other_s": 0.009208079427480698
+    },
+    {
+      "prompt_id": 6,
+      "method": "bon",
+      "eval_step": 64,
+      "eval_label": "end",
+      "batch_before": 4,
+      "batch_after": 4,
+      "eval_total_s": 0.17413865216076374,
+      "decode_vae_s": 0.0617973655462265,
+      "reward_eval_s": 0.09076659381389618,
+      "eval_other_s": 0.02157469280064106
+    },
+    {
+      "prompt_id": 6,
+      "method": "pps",
+      "eval_step": 16,
+      "eval_label": "25pct",
+      "batch_before": 8,
+      "batch_after": 4,
+      "eval_total_s": 0.26085907779634,
+      "decode_vae_s": 0.11160214431583881,
+      "reward_eval_s": 0.12111760675907135,
+      "eval_other_s": 0.028139326721429825
+    },
+    {
+      "prompt_id": 6,
+      "method": "pps",
+      "eval_step": 32,
+      "eval_label": "50pct",
+      "batch_before": 4,
+      "batch_after": 2,
+      "eval_total_s": 0.1692744679749012,
+      "decode_vae_s": 0.06182975508272648,
+      "reward_eval_s": 0.09149922616779804,
+      "eval_other_s": 0.01594548672437668
+    },
+    {
+      "prompt_id": 6,
+      "method": "pps",
+      "eval_step": 64,
+      "eval_label": "end",
+      "batch_before": 2,
+      "batch_after": 2,
+      "eval_total_s": 0.08562347665429115,
+      "decode_vae_s": 0.03713794983923435,
+      "reward_eval_s": 0.037278641015291214,
+      "eval_other_s": 0.011206885799765587
+    },
+    {
+      "prompt_id": 7,
+      "method": "bon",
+      "eval_step": 64,
+      "eval_label": "end",
+      "batch_before": 4,
+      "batch_after": 4,
+      "eval_total_s": 0.2562634255737066,
+      "decode_vae_s": 0.06184116750955582,
+      "reward_eval_s": 0.1781348902732134,
+      "eval_other_s": 0.016287367790937424
+    },
+    {
+      "prompt_id": 7,
+      "method": "pps",
+      "eval_step": 16,
+      "eval_label": "25pct",
+      "batch_before": 8,
+      "batch_after": 4,
+      "eval_total_s": 0.2645811475813389,
+      "decode_vae_s": 0.1116002518683672,
+      "reward_eval_s": 0.11617431230843067,
+      "eval_other_s": 0.036806583404541016
+    },
+    {
+      "prompt_id": 7,
+      "method": "pps",
+      "eval_step": 32,
+      "eval_label": "50pct",
+      "batch_before": 4,
+      "batch_after": 2,
+      "eval_total_s": 0.1693962886929512,
+      "decode_vae_s": 0.061831725761294365,
+      "reward_eval_s": 0.09171636030077934,
+      "eval_other_s": 0.015848202630877495
+    },
+    {
+      "prompt_id": 7,
+      "method": "pps",
+      "eval_step": 64,
+      "eval_label": "end",
+      "batch_before": 2,
+      "batch_after": 2,
+      "eval_total_s": 0.10558174923062325,
+      "decode_vae_s": 0.037100719287991524,
+      "reward_eval_s": 0.05425597354769707,
+      "eval_other_s": 0.014225056394934654
+    },
+    {
+      "prompt_id": 8,
+      "method": "bon",
+      "eval_step": 64,
+      "eval_label": "end",
+      "batch_before": 4,
+      "batch_after": 4,
+      "eval_total_s": 0.17381619475781918,
+      "decode_vae_s": 0.06181781366467476,
+      "reward_eval_s": 0.09306477382779121,
+      "eval_other_s": 0.018933607265353203
+    },
+    {
+      "prompt_id": 8,
+      "method": "pps",
+      "eval_step": 16,
+      "eval_label": "25pct",
+      "batch_before": 8,
+      "batch_after": 4,
+      "eval_total_s": 0.2824776731431484,
+      "decode_vae_s": 0.11165464296936989,
+      "reward_eval_s": 0.1362943071871996,
+      "eval_other_s": 0.03452872298657894
+    },
+    {
+      "prompt_id": 8,
+      "method": "pps",
+      "eval_step": 32,
+      "eval_label": "50pct",
+      "batch_before": 4,
+      "batch_after": 2,
+      "eval_total_s": 0.1306287795305252,
+      "decode_vae_s": 0.062062377110123634,
+      "reward_eval_s": 0.05266650766134262,
+      "eval_other_s": 0.015899894759058952
+    },
+    {
+      "prompt_id": 8,
+      "method": "pps",
+      "eval_step": 64,
+      "eval_label": "end",
+      "batch_before": 2,
+      "batch_after": 2,
+      "eval_total_s": 0.09362254291772842,
+      "decode_vae_s": 0.03711890988051891,
+      "reward_eval_s": 0.047225404530763626,
+      "eval_other_s": 0.009278228506445885
+    },
+    {
+      "prompt_id": 9,
+      "method": "bon",
+      "eval_step": 64,
+      "eval_label": "end",
+      "batch_before": 4,
+      "batch_after": 4,
+      "eval_total_s": 0.17830031737685204,
+      "decode_vae_s": 0.06183038279414177,
+      "reward_eval_s": 0.09948455169796944,
+      "eval_other_s": 0.01698538288474083
+    },
+    {
+      "prompt_id": 9,
+      "method": "pps",
+      "eval_step": 16,
+      "eval_label": "25pct",
+      "batch_before": 8,
+      "batch_after": 4,
+      "eval_total_s": 0.2703491523861885,
+      "decode_vae_s": 0.11174643225967884,
+      "reward_eval_s": 0.12983217276632786,
+      "eval_other_s": 0.02877054736018181
+    },
+    {
+      "prompt_id": 9,
+      "method": "pps",
+      "eval_step": 32,
+      "eval_label": "50pct",
+      "batch_before": 4,
+      "batch_after": 2,
+      "eval_total_s": 0.13458071649074554,
+      "decode_vae_s": 0.06185798533260822,
+      "reward_eval_s": 0.05687700770795345,
+      "eval_other_s": 0.01584572345018387
+    },
+    {
+      "prompt_id": 9,
+      "method": "pps",
+      "eval_step": 64,
+      "eval_label": "end",
+      "batch_before": 2,
+      "batch_after": 2,
+      "eval_total_s": 0.10653872415423393,
+      "decode_vae_s": 0.03716403990983963,
+      "reward_eval_s": 0.06009998545050621,
+      "eval_other_s": 0.009274698793888092
+    },
+    {
+      "prompt_id": 10,
+      "method": "bon",
+      "eval_step": 64,
+      "eval_label": "end",
+      "batch_before": 4,
+      "batch_after": 4,
+      "eval_total_s": 0.17243219539523125,
+      "decode_vae_s": 0.06192142516374588,
+      "reward_eval_s": 0.09401730820536613,
+      "eval_other_s": 0.016493462026119232
+    },
+    {
+      "prompt_id": 10,
+      "method": "pps",
+      "eval_step": 16,
+      "eval_label": "25pct",
+      "batch_before": 8,
+      "batch_after": 4,
+      "eval_total_s": 0.2732945829629898,
+      "decode_vae_s": 0.11170570179820061,
+      "reward_eval_s": 0.13189075887203217,
+      "eval_other_s": 0.029698122292757034
+    },
+    {
+      "prompt_id": 10,
+      "method": "pps",
+      "eval_step": 32,
+      "eval_label": "50pct",
+      "batch_before": 4,
+      "batch_after": 2,
+      "eval_total_s": 0.15344850905239582,
+      "decode_vae_s": 0.061847684904932976,
+      "reward_eval_s": 0.07563803158700466,
+      "eval_other_s": 0.015962792560458183
+    },
+    {
+      "prompt_id": 10,
+      "method": "pps",
+      "eval_step": 64,
+      "eval_label": "end",
+      "batch_before": 2,
+      "batch_after": 2,
+      "eval_total_s": 0.08889200910925865,
+      "decode_vae_s": 0.03709690645337105,
+      "reward_eval_s": 0.0418753307312727,
+      "eval_other_s": 0.009919771924614906
+    }
+  ]
+}

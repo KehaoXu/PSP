@@ -1,0 +1,41 @@
+{
+  "prompts_path": "/root/feature_fk_search/Fk-Diffusion-Steering/text_to_image/prompt_files/benchmark_ir.json",
+  "output_dir": "/root/feature_fk_search/results/compute_estimates/rebuttal/sdxl_vaechunk_K1_vaechunk_cudnn-auto_20260511_114439",
+  "model_name": "stable-diffusion-xl",
+  "device": "cuda",
+  "seed": 0,
+  "prompt_start_id": 0,
+  "num_prompts_total": 11,
+  "num_prompts_stats": 10,
+  "time_steps": 64,
+  "eta": 0.0,
+  "methods": "pps",
+  "pps_offload_first_n_evals": 0,
+  "cudnn_benchmark": "auto",
+  "pps_vae_decode_batch": 1,
+  "method_configs": {
+    "bon": {
+      "init_particles": 4,
+      "eval_steps": [
+        64
+      ]
+    },
+    "pps": {
+      "init_particles": 8,
+      "eval_steps": [
+        16,
+        32,
+        64
+      ],
+      "keep_by_step": {
+        "16": 4,
+        "32": 2,
+        "64": 2
+      }
+    }
+  },
+  "selected_methods": [
+    "pps"
+  ],
+  "cudnn_benchmark_state": "unchanged:False"
+}

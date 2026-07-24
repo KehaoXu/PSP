@@ -1,0 +1,9 @@
+DSearch root: /media/rogerio-lab/rogerio_ssd1/projects/feature_fk_search/results/dsearch_v2/sd15/dsearch_sd15_k4_t64_ir_geneval
+Guidance metric: IR
+
+Per-seed results:
+- seed=42: IR_mean=0.773956, GenEval=0.499657, prompts=553, shards=8
+- seed=43: IR_mean=0.773164, GenEval=0.502974, prompts=553, shards=8
+- seed=44: IR_mean=0.801304, GenEval=0.515298, prompts=553, shards=8
+
+Mean across seeds: IR_mean=0.782808 (std=0.013082), GenEval=0.505976 (std=0.006729)

@@ -1,0 +1,22 @@
+DSearch-v2 expected effective C reference (launcher defaults)
+
+Hyperparameters used in all dsearch_v2 launchers:
+- num_images=1
+- bs=1
+- duplicate_size=1
+- w=2
+- oversamplerate=2
+- search_schudule=all
+- drop_schudule=exponential
+- replacerate=0
+- variant=PM
+
+Mapping used by runner:
+- raw C (search step) = w * oversamplerate = 2 * 2 = 4
+- expected |A|/T (search_schudule=all) = 1
+- expected C_bar = 1 + (|A|/T) * (rawC - 1) = 1 + 1 * (4 - 1) = 4
+
+Model-specific T:
+- sd15: T=64
+- sdxl: T=64
+- sd35: T=32 (with stochastic sampler, gamma=0.005)

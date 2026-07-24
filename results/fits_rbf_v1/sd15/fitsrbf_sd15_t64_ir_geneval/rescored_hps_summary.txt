@@ -1,0 +1,10 @@
+Re-scored HPS (HPSv2 v2.1) for: /home/rogerio-lab/PycharmProjects/feature_fk_search/results_local/fits_rbf_v1/sd15/fitsrbf_sd15_t64_ir_geneval
+Method: fits_rbf   Backbone: sd15
+Winner image: <prompt_id>/best_of_n_samples/<first .png>
+
+Per-seed results:
+- seed=42: HPS_mean=0.274950, prompts=553
+- seed=43: HPS_mean=0.273428, prompts=553
+- seed=44: HPS_mean=0.274812, prompts=553
+
+Mean across seeds: HPS_mean=0.274397 (std=0.000687)

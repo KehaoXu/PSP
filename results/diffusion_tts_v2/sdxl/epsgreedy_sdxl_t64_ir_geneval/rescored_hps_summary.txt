@@ -1,0 +1,10 @@
+Re-scored HPS (HPSv2 v2.1) for: /media/rogerio-lab/rogerio_ssd1/projects/feature_fk_search/results/diffusion_tts_v2/sdxl/epsgreedy_sdxl_t64_ir_geneval
+Method: diffusion_tts   Backbone: sdxl
+Winner image: <prompt_id>/best_of_n_samples/<first .png>
+
+Per-seed results:
+- seed=42: HPS_mean=0.296820, prompts=553
+- seed=43: HPS_mean=0.298541, prompts=553
+- seed=44: HPS_mean=0.297707, prompts=553
+
+Mean across seeds: HPS_mean=0.297689 (std=0.000703)
