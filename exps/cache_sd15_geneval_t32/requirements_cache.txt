@@ -1,0 +1,28 @@
+# Versions from Fk-Diffusion-Steering/requirements.txt (the subset this cache needs), as in the Colab runs.
+# diffusers@af28ae2, ImageReward@2ca71ba, fairscale and clip-anytorch are installed by setup_env.sh with --no-deps.
+torch==2.4.0
+torchvision==0.19.0
+transformers==4.38.2
+tokenizers==0.15.2
+huggingface-hub==0.27.1
+accelerate==1.2.1
+safetensors==0.5.2
+numpy==1.26.3
+scipy==1.13.1
+pandas==2.2.1
+pyarrow==18.1.0
+pillow==11.1.0
+timm==1.0.13
+einops==0.8.0
+ftfy==6.3.1
+regex==2024.11.6
+sentencepiece==0.2.0
+tqdm==4.66.4
+requests==2.32.3
+filelock==3.16.1
+importlib_metadata==8.5.0
+protobuf==3.20.3
+hpsv2==1.2.0
+packaging
+google-genai
+typing_extensions

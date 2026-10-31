@@ -6,6 +6,7 @@ import json
 import os
 from typing import Dict, List, Sequence
 
+import numpy as np
 import torch
 from tqdm import tqdm
 from diffusers import DDIMScheduler, UNet2DConditionModel
@@ -285,6 +286,18 @@ def main() -> None:
     parser.add_argument("--batch-size", type=int, default=4)
     parser.add_argument("--eta", type=float, default=0.0)
     parser.add_argument(
+        "--score-every",
+        type=int,
+        default=1,
+        help="Score pred_x0 every N denoising steps (the last step is always scored). 1 = every step.",
+    )
+    parser.add_argument(
+        "--save-x0",
+        action="store_true",
+        help="Also save the scored pred_x0 latents to x0_latents/<prompt_id>.npz "
+        "(latents: seeds x scored steps x C x H x W).",
+    )
+    parser.add_argument(
         "--no_hps",
         action="store_true",
         help="Skip HumanPreference metric collection and only store ImageReward.",
@@ -301,6 +314,16 @@ def main() -> None:
         raise ValueError("--time-steps must be >= 1")
     if args.batch_size < 1:
         raise ValueError("--batch-size must be >= 1")
+    if args.score_every < 1:
+        raise ValueError("--score-every must be >= 1")
+
+    # 1-indexed step numbers whose pred_x0 gets scored; the final step is always included.
+    scored_step_numbers = [
+        s
+        for s in range(1, args.time_steps + 1)
+        if s % args.score_every == 0 or s == args.time_steps
+    ]
+    scored_step_indices = {s - 1 for s in scored_step_numbers}
 
     all_prompts = read_prompts(args.prompts_path)
     if not all_prompts:
@@ -322,10 +345,14 @@ def main() -> None:
     metrics_csv_path = os.path.join(args.output_dir, "metrics.csv")
     samples_root = os.path.join(args.output_dir, "samples")
     os.makedirs(samples_root, exist_ok=True)
+    x0_root = os.path.join(args.output_dir, "x0_latents")
+    if args.save_x0:
+        os.makedirs(x0_root, exist_ok=True)
 
     args_to_save = vars(args).copy()
     args_to_save["prompt_end_id"] = prompt_end_id
     args_to_save["resolved_num_prompts"] = selected_count
+    args_to_save["scored_steps"] = scored_step_numbers
     print("Args:", json.dumps(args_to_save, indent=2))
     with open(os.path.join(args.output_dir, "args.json"), "w", encoding="utf-8") as f:
         json.dump(args_to_save, f, indent=2)
@@ -343,9 +370,13 @@ def main() -> None:
     running_final_count = 0
     pct_labels = ["20", "40", "60", "80"]
     pct_fractions = [0.2, 0.4, 0.6, 0.8]
-    pct_step_numbers = [
+    pct_targets = [
         max(1, min(args.time_steps, int(round(args.time_steps * frac))))
         for frac in pct_fractions
+    ]
+    # Snap each checkpoint to the nearest scored step (identity when --score-every 1).
+    pct_step_numbers = [
+        min(scored_step_numbers, key=lambda s: abs(s - target)) for target in pct_targets
     ]
     pct_step_indices = [step_num - 1 for step_num in pct_step_numbers]
     running_pct_ir_sum = {label: 0.0 for label in pct_labels}
@@ -376,6 +407,7 @@ def main() -> None:
 
             prompt_seed_base = args.seed + prompt_id * args.num_seeds
             prompt_seeds = [prompt_seed_base + i for i in range(args.num_seeds)]
+            prompt_x0_batches: List[torch.Tensor] = []
             for batch in chunked(prompt_seeds, args.batch_size):
                 batch_step_bar = tqdm(
                     total=args.time_steps,
@@ -392,6 +424,7 @@ def main() -> None:
                 step_image_reward: Dict[int, List[float]] = {}
                 step_hps: Dict[int, List[float]] = {}
                 step_timesteps: Dict[int, int] = {}
+                step_x0: Dict[int, torch.Tensor] = {}
 
                 if is_sd35:
                     prev_latents = pipeline.prepare_latents(
@@ -407,12 +440,18 @@ def main() -> None:
 
                     def capture_callback(_pipeline, step_idx, t, callback_kwargs):
                         nonlocal prev_latents
+                        if step_idx not in scored_step_indices:
+                            prev_latents = callback_kwargs.get("latents", prev_latents)
+                            batch_step_bar.update(1)
+                            return {}
                         x0_preds = compute_x0_preds_sd35(
                             pipeline=pipeline,
                             prev_latents=prev_latents,
                             t=t,
                             callback_kwargs=callback_kwargs,
                         )
+                        if args.save_x0:
+                            step_x0[step_idx] = x0_preds.cpu()
                         image_tensor = decode_latents_to_tensor_sd35(
                             pipeline=pipeline, latents=x0_preds
                         ).detach()
@@ -481,6 +520,10 @@ def main() -> None:
                         prompt_embeds = callback_kwargs.get("prompt_embeds")
                         if prompt_embeds is None:
                             return {}
+                        if step_idx not in scored_step_indices:
+                            prev_latents = callback_kwargs.get("latents", prev_latents)
+                            batch_step_bar.update(1)
+                            return {}
                         x0_preds = compute_x0_preds_non_sd35(
                             pipeline=pipeline,
                             scheduler=scoring_scheduler,
@@ -489,6 +532,8 @@ def main() -> None:
                             callback_kwargs=callback_kwargs,
                             eta=args.eta,
                         )
+                        if args.save_x0:
+                            step_x0[step_idx] = x0_preds.cpu()
                         decode_fn = (
                             latent_to_decode_sdxl
                             if isinstance(pipeline, FKDStableDiffusionXL)
@@ -541,6 +586,11 @@ def main() -> None:
                         )
                     final_images = output.images if hasattr(output, "images") else output[0]
                 batch_step_bar.close()
+                if args.save_x0:
+                    # [batch, scored steps, C, H, W]
+                    prompt_x0_batches.append(
+                        torch.stack([step_x0[s - 1] for s in scored_step_numbers], dim=1)
+                    )
 
                 for seed, image in zip(batch, final_images):
                     image.save(os.path.join(prompt_sample_dir, f"{seed:05d}.png"))
@@ -678,6 +728,18 @@ def main() -> None:
                                 "human_preference": hps_score,
                             }
                         )
+
+            if args.save_x0:
+                x0_latents = torch.cat(prompt_x0_batches, dim=0)
+                if x0_latents.dtype == torch.bfloat16:
+                    x0_latents = x0_latents.float()  # numpy has no bfloat16
+                np.savez(
+                    os.path.join(x0_root, f"{prompt_id:05d}.npz"),
+                    latents=x0_latents.numpy(),
+                    seeds=np.array(prompt_seeds),
+                    steps=np.array(scored_step_numbers),
+                    timesteps=np.array([step_timesteps[s - 1] for s in scored_step_numbers]),
+                )
 
     print(f"Saved metrics to {metrics_csv_path}")
 
